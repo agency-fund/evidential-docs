@@ -104,3 +104,5 @@ nav:
     - Overview: integration/overview.md
     - How it works: integration/integration.md
   - Latest Updates: blog/index.md
+  - Contributing:
+      - Maintainer Guide: maintainer-guide.md
