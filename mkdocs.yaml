@@ -1,0 +1,106 @@
+site_name: "Evidential" 
+site_description: "Evidential Documentation"
+site_url: https://docs.evidential.dev/
+repo_url: https://github.com/agency-fund/evidential
+extra:
+  generator: false
+  social:
+    - icon: material/shield-lock
+      link: https://www.idinsight.org/about/privacy-policy/
+      name: Privacy Policy
+  version:
+    provider: mike
+    alias: true
+    default: latest
+
+theme:
+  name: material
+  icon: 
+    logo: material/cog
+  font:
+    text: "Inter"
+    code: "Roboto Mono"
+  palette:
+    - scheme: slate # Palette toggle for dark mode
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default # Palette toggle for light mode
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - content.code.annotate
+    - content.code.copy
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+
+  icon:
+    admonition:
+      note: material/alert-circle
+    annotation: material/help-circle
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      title: On this page
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+plugins:
+  - glightbox
+  - search
+  - blog:
+      post_excerpt: required
+  - open-in-new-tab
+
+nav:
+  - Welcome to Evidential: 
+    - Overview: index.md
+    - Getting Started: getting-started.md
+    - Architecture: architecture.md
+  - Deploying:
+    - Overview: deployment/overview.md
+  - Developing:
+    - Getting started: development/getting-started-dev.md
+    - Testing:
+      - Overview: development/testing.md
+      - Updating Testing DWH: development/updating-testing-dwh.md
+    - Other Topics:
+      - Migration: development/migration.md
+      - SQLAlchemy: development/sqlalchemy.md
+      - Task-Queues: development/task-queues.md
+      - Reading List: development/reading-list.md
+      - FAQs: development/faq.md
+  - Integrating:
+    - Overview: integration/overview.md
+    - How it works: integration/integration.md
+  - Latest Updates: blog/index.md
