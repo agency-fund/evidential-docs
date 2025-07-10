@@ -81,14 +81,15 @@ plugins:
 
 nav:
   - Welcome to Evidential: 
-    - Overview: index.md
-    - Getting Started: getting-started.md
-    - Architecture: architecture.md
+    - Overview: welcome/index.md
+    - Getting Started: welcome/getting-started.md
+    - Architecture: welcome/architecture.md
   - Deploying:
     - Overview: deployment/overview.md
   - Developing:
     - Getting started: development/getting-started-dev.md
     - Airplane Mode: development/airplane-mode.md
+    - Contributing: development/contributing.md
     - Contributing to docs: maintainer_guide.md
     - Testing:
       - Overview: development/testing.md
