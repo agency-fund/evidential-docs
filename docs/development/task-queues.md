@@ -114,7 +114,7 @@ VALUES ('task_RANDOM',
 ## Implementing a Handler
 
 Handlers are implemented within the Task Queue service. To deploy a new handler, register it with the TaskQueue service
-in [src/xngin/tq/cli.py](../src/xngin/tq/cli.py). Example:
+in [src/xngin/tq/cli.py](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/tq/cli.py). Example:
 
 ```python
 def webhook_handler(task: Task):

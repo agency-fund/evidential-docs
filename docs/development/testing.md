@@ -2,9 +2,10 @@
 
 
 This is a collection of random tips about testing. Most of the test configurations you will use are already defined
-in the [Taskfile](../Taskfile.yml).
+in the [Taskfile](https://github.com/agency-fund/evidential-be/blob/main/Taskfile.yml).
 
-> Warning: If you find yourself doing any testing that doesn't have `task` entry for it already, let's talk!
+!!! warning 
+    If you find yourself doing any testing that doesn't have `task` entry for it already, let's talk!
 
 ## Unit Tests<a name="unit-tests"></a>
 
@@ -17,13 +18,13 @@ task test
 We run unittests with [pytest](https://docs.pytest.org/en/stable/).
 
 The `task test` helper automatically creates a local Postgres instance for testing and creates a testing datawarehouse
-in the "dwh" database from [testing_dwh.csv.zst](../src/xngin/apiserver/testdata/testing_dwh.csv.zst) file.
-[testing_sheet.csv](../src/xngin/apiserver/testdata/testing_sheet.csv) is the corresponding spreadsheet that simulates a
+in the "dwh" database from [testing_dwh.csv.zst](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/testdata/testing_dwh.csv.zst) file.
+[testing_sheet.csv](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/testdata/testing_sheet.csv) is the corresponding spreadsheet that simulates a
 typical table configuration for the participant type data above.
 
-[Various tests](../.github/workflows/test.yaml) are also run as part of our GitHub action test workflow.
+[Various tests](https://github.com/agency-fund/evidential-be/blob/main/.github/workflows/test.yaml) are also run as part of our GitHub action test workflow.
 
-[conftest.py](../src/xngin/apiserver/conftest.py) defines fixtures used by many of the tests.
+[conftest.py](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/conftest.py) defines fixtures used by many of the tests.
 
 ## Google Integration Tests<a name="google-integration-tests"></a>
 
@@ -52,7 +53,7 @@ pushed to GitHub.
 Method 2: Trigger via GitHub UI
 
 1. Push the branch to GitHub (i.e. draft PR)
-1. Click https://github.com/agency-fund/xngin/actions/workflows/test.yaml
+1. Go to the [Testing workflow](https://github.com/agency-fund/evidential-be/actions/workflows/test.yaml)
 1. Click "new workflow"
 1. Select the PR's branch name
 1. Tick the "bq integration" box.
@@ -66,10 +67,10 @@ You can also trigger the BigQuery integration tests to run in GHA by putting `ru
 
 ## API Test Scripts<a name="api-test-scripts"></a>
 
-See [apitest.strata.xurl](../src/xngin/apiserver/routers/stateless/testdata/apitest.strata.xurl) for a complete example
+See [apitest.strata.xurl](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/routers/stateless/testdata/apitest.strata.xurl) for a complete example
 of how to write an
 API test script. We use a small custom
-file format called [Xurl](../src/xngin/apiserver/testing/xurl.py).
+file format called [Xurl](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/testing/xurl.py).
 
 `test_api.py` tests that use `testdata/*.xurl` data can be automatically updated with the actual server results by
 prefixing your pytest run with the environment variable: `UPDATE_API_TESTS=1`.
@@ -115,6 +116,8 @@ The tool is also used for interacting with the BQ API directly
 These commands use Google's [Application Default Credentials]
 (https://cloud.google.com/docs/authentication/application-default-credentials) process.
 
-> Note: The GHA service account has permissions to access the xngin-development-dc.ds dataset.
+!!! note 
+    The GHA service account has permissions to access the xngin-development-dc.ds dataset.
 
-> Note: You do not need the gcloud CLI or related tooling installed.
+!!! note
+    You do not need the gcloud CLI or related tooling installed.

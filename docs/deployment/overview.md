@@ -3,7 +3,7 @@
 
 ## Deployment on Railway<a name="deployment-on-railway"></a>
 
-Our Railway deployments rely on [Dockerfile.railway](Dockerfile.railway), [railway.json](railway.json), and some
+Our Railway deployments rely on [Dockerfile.railway](https://github.com/agency-fund/evidential-be/blob/main/Dockerfile.railway), [railway.json](https://github.com/agency-fund/evidential-be/blob/main/railway.json), and some
 environment variables:
 
 | Environment Variable         | Purpose                                                                                                                                                                                                    | Example                                                                                               |
@@ -17,9 +17,9 @@ In addition, there are variables set in the Railway console corresponding to con
 the [xngin.railway.settings.json](https://github.com/agency-fund/xngin-settings/xngin.railway.settings.json) file in the
 limited-access https://github.com/agency-fund/xngin-settings repository.
 
-## Admin API<a name="admin-api"></a>
+## Admin API
 
-The Admin API supports the [xngin-dash](https://github.com/agency-fund/xngin-dash) frontend.
+The Admin API supports the [Evidential Frontend](https://github.com/agency-fund/evidential-fe) frontend.
 
 The Admin API is authenticated via OIDC. OIDC must be configured with additional environment variables (see below).
 
