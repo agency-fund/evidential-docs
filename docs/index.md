@@ -64,7 +64,7 @@ Here are some ideas our early partners have tested out:
 
 Evidential is a collaboration between [IDinsight](https://www.idinsight.org) and the [Agency Fund](https://www.agencyfund.org)—two teams that heard the same need: make experimentation painless for nonprofits.
 
-We combined complementary approaches into one shared platform ([read the blog](#)). Our team includes data scientists, engineers, and product designers with decades of experience building tools for both commercial and social sectors.
+We combined complementary approaches into one shared platform ([read the blog](https://theagencyfund.substack.com/p/evidential-a-new-experiment-engine)). Our team includes data scientists, engineers, and product designers with decades of experience building tools for both commercial and social sectors.
 
 ## Get started
 
