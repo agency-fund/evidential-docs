@@ -89,6 +89,7 @@ nav:
     - Overview: deployment/overview.md
   - Developing:
     - Getting started: development/getting-started-dev.md
+    - Airplane Mode: development/airplane-mode.md
     - Testing:
       - Overview: development/testing.md
       - Updating Testing DWH: development/updating-testing-dwh.md
