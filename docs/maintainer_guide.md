@@ -28,11 +28,9 @@ mkdocs serve
 
 ## 2. Routine content update & deploy
 
-After publishing changes and merging PR, redeploy
-```bash
-# Build & publish to GitHub Pages
-mkdocs gh-deploy --remote-branch gh-pages --force
-```
+After publishing changes and merging the PR into the `docs` branch, the site will be **automatically deployed** by GitHub Actions via the `deploy-docs.yaml` workflow.
+
+You can monitor deployment progress in the **Actions** tab on GitHub.
 
 The `docs` branch holds the source.  
 The `gh-pages` branch holds the built site and the CNAME file.
