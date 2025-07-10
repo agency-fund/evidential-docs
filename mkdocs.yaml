@@ -84,12 +84,12 @@ nav:
     - Overview: index.md
     - Getting Started: getting-started.md
     - Architecture: architecture.md
-    - Contributing: maintainer_guide.md
   - Deploying:
     - Overview: deployment/overview.md
   - Developing:
     - Getting started: development/getting-started-dev.md
     - Airplane Mode: development/airplane-mode.md
+    - Contributing to docs: maintainer_guide.md
     - Testing:
       - Overview: development/testing.md
       - Updating Testing DWH: development/updating-testing-dwh.md
