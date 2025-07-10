@@ -1,0 +1,51 @@
+/* 1. form container */
+.contact-form form {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* 2. labels */
+.contact-form .form-field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--md-default-fg-color);
+  font-weight: 500;
+  margin-top: 0.7rem;
+}
+
+/* 3. inputs & textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  color: var(--md-default-fg-color);
+  transition: border-color 0.2s;
+}
+
+/* 4. focus state */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--md-primary-fg-color);
+}
+
+/* 5. submit button spacing */
+.contact-form .form-submit {
+  margin-top: 1rem;
+  background: var(--md-primary-fg-color);
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+}
+
+.contact-form .form-submit:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}

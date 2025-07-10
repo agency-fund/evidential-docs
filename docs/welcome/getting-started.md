@@ -1,7 +1,7 @@
 # 🚀 Getting Started
 
 > 🚧 🚧 **IMPORTANT**  
-> Self-onboarding isn’t available yet. Join the wait-list by [contacting us](contact.md)
+> Self-onboarding isn’t available yet. Join the wait-list by [contacting us](../contact.md)
 
 ## Log in
 Once your organisation is authorised, go to **[app.evidential.dev](https://app.evidential.dev)** and sign in with **Google SSO**.
@@ -17,4 +17,4 @@ Once your organisation is authorised, go to **[app.evidential.dev](https://app.e
 5. **Analyse results** – use the built-in dashboard or query the experiment results endpoint
 
 
-Questions? [Contact us](contact.md)
+Questions? [Contact us](../contact.md)

@@ -1,7 +1,7 @@
 # Contributing
 
 ## Reach out first  
-Before you start coding, please [contact us](contact.md).  
+Before you start coding, please [contact us](../contact.md).  
 We’re happy to brainstorm use‑cases and make sure your effort fits the project’s roadmap.
 
 ## Community‑driven vision  
@@ -20,6 +20,6 @@ Your ideas, code, and feedback are essential to its success.
 6. A maintainer will review your PR, request changes if needed, and merge when ready.
 
 ## Request a feature
-If you don't feel like contributing, simply request a feature by [contacting us](contact.md)
+If you don't feel like contributing, simply request a feature by [contacting us](../contact.md)
 
 Thanks for helping us build something better—together!
