@@ -2,7 +2,7 @@
 
 ## How do I hide the generated SQL from the logs or console output?<a name="how-do-i-hide-the-generated-sql-from-the-logs-or-console-output"></a>
 
-See the environment variables in [Taskfile.yml](../Taskfile.yml) and customlogging.py for documentation on how to
+See the environment variables in [Taskfile.yml](https://github.com/agency-fund/evidential-be/blob/main/Taskfile.yml) and customlogging.py for documentation on how to
 control logging.
 
 ## psycopg2 module does not install correctly.<a name="psycopg2-module-does-not-install-correctly"></a>

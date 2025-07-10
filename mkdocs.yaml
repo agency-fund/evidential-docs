@@ -1,20 +1,17 @@
 site_name: "Evidential" 
 site_description: "Evidential Documentation"
 site_url: https://docs.evidential.dev/
-repo_url: https://github.com/agency-fund/evidential
+repo_url: https://github.com/agency-fund/evidential-be
 extra:
   generator: false
   social:
     - icon: material/shield-lock
       link: https://www.idinsight.org/about/privacy-policy/
       name: Privacy Policy
-  version:
-    provider: mike
-    alias: true
-    default: latest
 
 theme:
   name: material
+  custom_dir: overrides
   icon: 
     logo: material/cog
   font:
@@ -87,6 +84,7 @@ nav:
     - Overview: index.md
     - Getting Started: getting-started.md
     - Architecture: architecture.md
+    - Contributing: maintainer_guide.md
   - Deploying:
     - Overview: deployment/overview.md
   - Developing:
@@ -104,5 +102,3 @@ nav:
     - Overview: integration/overview.md
     - How it works: integration/integration.md
   - Latest Updates: blog/index.md
-  - Contributing:
-      - Maintainer Guide: maintainer-guide.md

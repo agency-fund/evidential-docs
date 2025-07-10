@@ -19,7 +19,7 @@ migrations.
 
 We are using [Atlas](https://atlasgo.io/) (non-Pro) to manage database schema migrations.
 
-When you make a change to the SQLAlchemy tables in src/xngin/apiserver/models, run this command to generate migration
+When you make a change to the SQLAlchemy tables in [models](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/models), run this command to generate migration
 files for Postgres:
 
 ```shell
@@ -27,11 +27,11 @@ task make-migrations
 ```
 
 The files will be created in migrations/sa_postgres. Commit any new files alongside your changes to the models.
-Migrations in the Railway environments happen automatically upon deployment. See [railway.json](railway.json)
-and [Dockerfile.railway](Dockerfile.railway) for more information.
+Migrations in the Railway environments happen automatically upon deployment. See [railway.json](https://github.com/agency-fund/evidential-be/blob/main/railway.json)
+and [Dockerfile.railway](https://github.com/agency-fund/evidential-be/blob/main/Dockerfile.railway) for more information.
 
 > Note: Your pushes will fail if you have changed the models but have not generated migrations. There is a GitHub Action
-> check in [.github/workflows/migration.yaml](migration.yaml) to ensure that pushes have
+> check in [migration.yaml](https://github.com/agency-fund/evidential-be/blob/main/.github/workflows/migration.yaml)to ensure that pushes have
 > migrations that match the models.
 
 Then, apply them to your local Postgres instance:

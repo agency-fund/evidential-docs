@@ -11,14 +11,14 @@ A free, open-source experiment engine built by and for nonprofits—putting rigo
 
 ## Why Evidential?
 
-Non-profits are hungry for rigorous evidence, yet most teams lack the technical or financial bandwidth to test ideas quickly. Evidential lets social-sector organisations create, run and learn from experiments with ease, speed, and no cost.
+Non-profits are hungry for rigorous evidence, yet most teams lack the technical or financial bandwidth to test ideas quickly. Evidential lets social-sector organisations create, run, and learn from experiments with ease, speed, and no cost.
 
 ## Who is it for?
 
 Evidential is built for nonprofits that are keen to test and learn. It is ideal when:
 
 - You’re delivering a digital or hybrid intervention  
-- You have visibility into your user journeys, feedback and behaviour  
+- You have visibility into your user journeys, feedback, and behaviour  
 - You know what outcomes you care about  
 - You have ideas worth testing  
 - But you lack the bandwidth, technical or financial, capacity to experiment rigorously on your own
@@ -73,7 +73,6 @@ We combined complementary approaches into one shared platform ([read the blog](#
 - [Contribute on GitHub](https://github.com/agency-fund/evidential)
 
 ---
+!!! info
 
-> 🗨️ Want to talk to us?  
-> Use the “**Talk to Us**” button in the top sidebar to contact the team.
-```
+    Want to learn more? Email us at [support@evidential.dev](mailto:support@evidential.dev)  
