@@ -36,6 +36,9 @@ jobs:
         run: |
           git switch gh-pages
           echo "docs.evidential.dev" > CNAME
-          git add CNAME
-          git commit -m "Add CNAME for custom domain"
-          git push -f origin gh-pages
+          if [ ! -f CNAME ]; then
+            echo "docs.evidential.dev" > CNAME
+            git add CNAME
+            git commit -m "Add CNAME for custom domain"
+            git push origin gh-pages
+          fi
