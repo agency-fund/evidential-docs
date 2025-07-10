@@ -1,7 +1,5 @@
 We’d love to hear from you. You can email us at [support@evidential.dev](mailto:support@evidential.dev) or fill out the form below:
 
---8<-- "contact-form.html"
-
 
 <div class="contact-form">
   <form action="https://formspree.io/f/mldnqgra" method="POST" novalidate>
