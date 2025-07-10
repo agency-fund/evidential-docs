@@ -70,7 +70,7 @@ We combined complementary approaches into one shared platform ([read the blog](h
 
 - [Read the quick-start guide](getting-started.md)  
 - Join the early-partner programme → email [support@evidential.dev](mailto:support@evidential.dev)  
-- [Contribute on GitHub](https://github.com/agency-fund/evidential)
+- [Contribute on GitHub](https://github.com/agency-fund/evidential-be)
 
 ---
 !!! info
