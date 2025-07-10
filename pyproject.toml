@@ -4,7 +4,7 @@ version = "0.0.1"
 description = "Documentation for Evidential, an experiments platform for the social sector"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [  
+dependencies = [
     "mkdocs-glightbox>=0.4.0",
     "mkdocs-material>=9.6.15",
     "mkdocs-open-in-new-tab>=1.0.8",
