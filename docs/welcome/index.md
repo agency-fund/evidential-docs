@@ -1,3 +1,8 @@
+---
+title: Welcome to Evidential
+home: true
+---
+
 # Welcome to Evidential!
 
 <video controls width="100%">
