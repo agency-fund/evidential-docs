@@ -80,8 +80,8 @@ plugins:
   - open-in-new-tab
 
 nav:
-  - Welcome to Evidential: 
-    - Overview: welcome/index.md
+  - Welcome to Evidential:
+    - Overview:  welcome/index.md
     - Getting Started: welcome/getting-started.md
     - Architecture: welcome/architecture.md
   - Deploying:
