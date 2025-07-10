@@ -1,7 +1,7 @@
 # Welcome to Evidential!
 
 <video controls width="100%">
-  <source src="media/video/evidential_demo_20250709.mp4" type="video/mp4">
+  <source src="/media/video/evidential_demo_20250709.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
