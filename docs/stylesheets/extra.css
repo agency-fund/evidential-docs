@@ -1,9 +1,9 @@
 /* 1. form container */
 .contact-form form {
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--md-accent-fg-color);
   border-radius: 6px;
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--md-default-fg-color--lightest);
 }
 
 /* 2. labels */
@@ -21,8 +21,8 @@
   width: 100%;
   box-sizing: border-box;
   font: inherit;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
   border-radius: 4px;
   padding: 0.5rem 0.75rem;
   color: var(--md-default-fg-color);
@@ -34,15 +34,17 @@
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--md-primary-fg-color);
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
 }
 
 /* 5. submit button spacing */
 .contact-form .form-submit {
   margin-top: 1rem;
-  background: var(--md-primary-fg-color);
+  background: var(--md-accent-fg-color);
   border: none;
   border-radius: 4px;
   padding: 0.75rem 1.5rem;
+  color: var(--md-typeset-fg-color);
 }
 
 .contact-form .form-submit:hover {
