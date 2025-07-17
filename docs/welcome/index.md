@@ -22,27 +22,27 @@ Non-profits are hungry for rigorous evidence, yet most teams lack the technical 
 
 Evidential is built for nonprofits that are keen to test and learn. It is ideal when:
 
-- You’re delivering a digital or hybrid intervention  
-- You have visibility into your user journeys, feedback, and behaviour  
-- You know what outcomes you care about  
-- You have ideas worth testing  
+- You’re delivering a digital or hybrid intervention
+- You have visibility into your user journeys, feedback, and behaviour
+- You know what outcomes you care about
+- You have ideas worth testing
 - But you lack the bandwidth, technical or financial, capacity to experiment rigorously on your own
 
 ## What makes it different?
 
-- **Built for the social sector** – our roadmap is steered by a few mission-driven orgs, not by Fortune-500 advertisers  
-- **Free & open-source** – use our managed cloud in minutes or self-host for full control  
-- **Impact-first metrics** – it measures your users’ behaviour change and program outcomes, not vanity clicks  
-- **Complex multi-source programmes** – turn your various data sources into metrics once, then run experiments indefinitely  
+- **Built for the social sector** – our roadmap is steered by a few mission-driven orgs, not by Fortune-500 advertisers
+- **Free & open-source** – use our managed cloud in minutes or self-host for full control
+- **Impact-first metrics** – it measures your users’ behaviour change and program outcomes, not vanity clicks
+- **Complex multi-source programmes** – turn your various data sources into metrics once, then run experiments indefinitely
 - **Hands-on support** – we guide you through hypothesis design, metric pipelines, launch and analysis, so you focus on learning what works, not on engineering
 
 ## Key Features
 
-- Intuitive UI to create and monitor experiments  
-- A single dashboard centralizing all your lessons learnt  
-- Compatible with both your Data warehouse and Event engines  
-- Multiple methods: frequentist A/B, Bayesian, Multi-armed & Contextual bandits  
-- Comprehensive API to manage experiments programmatically  
+- Intuitive UI to create and monitor experiments
+- A single dashboard centralizing all your lessons learnt
+- Compatible with both your Data warehouse and Event engines
+- Multiple methods: frequentist A/B, Bayesian, Multi-armed & Contextual bandits
+- Comprehensive API to manage experiments programmatically
 - *(Coming soon)* Integrations with the main messaging and survey platforms used by nonprofits
 
 ## What is it not?
@@ -59,10 +59,10 @@ Evidential shines when you want to continuously improve your complex program aga
 
 Here are some ideas our early partners have tested out:
 
-- Does the personalized AI response lead to better user engagement?  
-- Does using a casual tone with younger users lead to higher completion rates?  
-- Does reducing the number of questions asked during onboarding lead to lower drop-off rates?  
-- What is the best time to send messages to ensure users engage with it?  
+- Does the personalized AI response lead to better user engagement?
+- Does using a casual tone with younger users lead to higher completion rates?
+- Does reducing the number of questions asked during onboarding lead to lower drop-off rates?
+- What is the best time to send messages to ensure users engage with it?
 - Will this new feature lead to greater time spent on the platform?
 
 ## Who are we?
@@ -73,11 +73,12 @@ We combined complementary approaches into one shared platform ([read the blog](h
 
 ## Get started
 
-- [Read the quick-start guide](getting-started.md)  
-- Join the early-partner programme → email [support@evidential.dev](mailto:support@evidential.dev)  
+- [Read the quick-start guide](getting-started.md)
+- Join the early-partner programme → email [support@evidential.dev](mailto:support@evidential.dev)
 - [Contribute on GitHub](https://github.com/agency-fund/evidential-be)
 
----
+______________________________________________________________________
+
 !!! info
 
-    Want to learn more? Email us at [support@evidential.dev](mailto:support@evidential.dev)  
+    Want to learn more? Email us at [support@evidential.dev](mailto:support@evidential.dev)

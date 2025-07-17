@@ -69,28 +69,28 @@ The most common case is:
 
 1. Two developers make changes to the database schema on the same day.
 1. Each developer runs `task make-migrations` to generate a migration file. The filenames are timestamps, so they likely
-   won't conflict with each other.
+    won't conflict with each other.
 1. Each developer has an updated `atlas.sum` file.
 1. Both developers push a PR for review. One gets reviewed and merged before the other.
 1. When the second PR is ready for merge, the conflict on `atlas.sum` will block the merge. The developer must now
-   resolve this conflict.
+    resolve this conflict.
 
 The general solution for the owner of the 2nd PR is:
 
 1. During the merge, "accept theirs" to resolve the conflict on `atlas.sum`. This drops your branch's changes so the
-   atlas.sum file matches the contents in the main branch. Commit the merge to the development branch.
+    atlas.sum file matches the contents in the main branch. Commit the merge to the development branch.
 
 1. Identify the name(s) of the migration file(s) no longer referenced by atlas.sum. Then, use the Atlas CLI to hash and
-   rebase the migrations to update the Atlas sum file. For example:
+    rebase the migrations to update the Atlas sum file. For example:
 
-   ```shell
-   $ uv run atlas migrate hash 20250513205837 --env sa_postgres
-   $ uv run atlas migrate rebase 20250513205837 --env sa_postgres
-   $ git add migrations
-   $ git commit -a -m "Rebase migrations."
-   # Update the PR.
-   $ git push
-   ```
+    ```shell
+    $ uv run atlas migrate hash 20250513205837 --env sa_postgres
+    $ uv run atlas migrate rebase 20250513205837 --env sa_postgres
+    $ git add migrations
+    $ git commit -a -m "Rebase migrations."
+    # Update the PR.
+    $ git push
+    ```
 
 ## How do I rollback a migration in my local development database?
 

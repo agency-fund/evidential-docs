@@ -1,10 +1,10 @@
 # Testing<a name="testing"></a>
 
-
 This is a collection of random tips about testing. Most of the test configurations you will use are already defined
 in the [Taskfile](https://github.com/agency-fund/evidential-be/blob/main/Taskfile.yml).
 
-!!! warning 
+!!! warning
+
     If you find yourself doing any testing that doesn't have `task` entry for it already, let's talk!
 
 ## Unit Tests<a name="unit-tests"></a>
@@ -95,7 +95,7 @@ Tests that exercise integration with a data warehouse do so via two mechanisms:
 
 1. xngin.testing.settings.json defines some static configuration for stable databases.
 1. The XNGIN_QUERIES_TEST_URI environment variable defines a SQLAlchemy URI that some of the apiserver.dwh tests are run
-   against.
+    against.
 
 By default, `task test` will run all the tests against Postgres. See the bq-integration GHA job for an example of how
 to run some of the tests against BigQuery.
@@ -116,8 +116,10 @@ The tool is also used for interacting with the BQ API directly
 These commands use Google's [Application Default Credentials]
 (https://cloud.google.com/docs/authentication/application-default-credentials) process.
 
-!!! note 
+!!! note
+
     The GHA service account has permissions to access the xngin-development-dc.ds dataset.
 
 !!! note
+
     You do not need the gcloud CLI or related tooling installed.

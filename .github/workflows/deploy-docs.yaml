@@ -9,7 +9,8 @@ permissions:
   contents: write
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - name: Configure Git Credentials
@@ -30,6 +31,8 @@ jobs:
         with:
           version: "0.7.18"
           enable-cache: true
+      - name: run pre-commit checks
+        run: uv run pre-commit run --show-diff-on-failure --color=always --all-files
       - name: Build and push docs version
         run: uv run mkdocs gh-deploy --force
       - name: Add CNAME

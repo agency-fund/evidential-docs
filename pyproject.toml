@@ -9,3 +9,8 @@ dependencies = [
     "mkdocs-material>=9.6.15",
     "mkdocs-open-in-new-tab>=1.0.8",
 ]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0",
+]

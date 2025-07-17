@@ -1,15 +1,19 @@
 !!! note
-    Cheatsheet for anyone who edits, deploys, or rolls back the Evidential docs site  
-    **Repo:** `github.com/evidential-org/evidential-docs`  
+
+    Cheatsheet for anyone who edits, deploys, or rolls back the Evidential docs site
+
+    **Repo:** `github.com/evidential-org/evidential-docs`
+
     **Live site:** [https://docs.evidential.dev](https://docs.evidential.dev)
 
----
+______________________________________________________________________
 
 ## Local setup
 
 1. Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
 1. Clone and switch to source branch
+
 ```bash
 git clone git@github.com:evidential-org/evidential-docs.git
 cd evidential-docs
@@ -17,6 +21,7 @@ git checkout docs
 ```
 
 1. Preview locally
+
 ```bash
 uv run mkdocs serve
 # Served at http://127.0.0.1:8000
@@ -28,7 +33,7 @@ After publishing changes and merging the PR into the `docs` branch, the site wil
 
 You can monitor deployment progress in the **Actions** tab on GitHub.
 
-The `docs` branch holds the source.  
+The `docs` branch holds the source.
 The `gh-pages` branch holds the built site and the CNAME file.
 
 ## Safe rollback
@@ -46,9 +51,6 @@ git push origin v1.2
 
 You can then revert the live site to that state:
 
-
 ```bash
 git push -f origin v1.2:gh-pages
 ```
-
-
