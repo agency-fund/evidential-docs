@@ -7,12 +7,12 @@ avoid [Implicit I/O](https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.ht
 when interacting with the database, we have adopted some conventions:
 
 1. When reading a `relationship()` attribute of a table model, you can use
-   `select(tables.T).options(selectinload(tables.T.rel))`
-   on the query to avoid accidental implicit I/O later. Some of the database helper methods have a `preload=` attribute
-   to make this more ergonomic.
+    `select(tables.T).options(selectinload(tables.T.rel))`
+    on the query to avoid accidental implicit I/O later. Some of the database helper methods have a `preload=` attribute
+    to make this more ergonomic.
 1. Our base table definition class includes [
-   `AsyncAttrs`](https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html#sqlalchemy.ext.asyncio.AsyncAttrs)
-   so that you may read attributes using async I/O as needed.
+    `AsyncAttrs`](https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html#sqlalchemy.ext.asyncio.AsyncAttrs)
+    so that you may read attributes using async I/O as needed.
 
 Note that visual inspection may not reveal all cases of implicit I/O due to SQLAlchemy's ORM session cache. If you
 are unsure if you are triggering implicit I/O, set `lazy="raise"` on the relationship field and an exception will be
