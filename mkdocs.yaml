@@ -1,4 +1,4 @@
-site_name: "Evidential" 
+site_name: "Evidential"
 site_description: "Evidential Documentation"
 site_url: https://docs.evidential.dev/
 repo_url: https://github.com/agency-fund/evidential-be
@@ -12,7 +12,7 @@ extra:
 theme:
   name: material
   custom_dir: overrides
-  icon: 
+  icon:
     logo: material/cog
   font:
     text: "Inter"
