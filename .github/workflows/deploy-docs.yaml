@@ -9,7 +9,8 @@ permissions:
   contents: write
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - name: Configure Git Credentials
