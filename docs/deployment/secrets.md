@@ -1,19 +1,5 @@
 # Secrets<a name="secrets"></a>
 
-<!-- mdformat-toc start --slug=github --maxlevel=3 --minlevel=1 -->
-
-- [Secrets](#secrets)
-    - [Overview](#overview)
-    - [Supported Encryption Backends](#supported-encryption-backends)
-    - [Algorithm Details](#algorithm-details)
-    - [Configuration](#configuration)
-        - [Selecting an Encryption Provider](#selecting-an-encryption-provider)
-        - [Enabling NaCl Encryption](#enabling-nacl-encryption)
-        - [Enabling Google Cloud KMS](#enabling-google-cloud-kms)
-        - [Debugging GCP KMS](#debugging-gcp-kms)
-
-<!-- mdformat-toc end -->
-
 ## Overview<a name="overview"></a>
 
 Evidential encrypts customer-provided database credentials to enhance security. This encryption reduces the risk of
@@ -29,7 +15,7 @@ We implement encryption-at-rest for:
 To accommodate various deployment scenarios, we offer these encryption options:
 
 | Backend                     | Use Case                                         | Description                                                                     |
-|-----------------------------|--------------------------------------------------|---------------------------------------------------------------------------------|
+| --------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------- |
 | No-op (`noop`)              | Local development only                           | No encryption is applied                                                        |
 | NaCl (`nacl`)               | Traditional web hosts, self-hosting, development | Uses symmetric encryption with a key accessible to the API server               |
 | Google Cloud KMS (`gcpkms`) | GCP deployments                                  | Uses Google Cloud Key Management Service (KMS) to implement envelope encryption |
@@ -73,23 +59,23 @@ XNGIN_SECRETS_BACKEND=nacl
 XNGIN_SECRETS_BACKEND=gcpkms
 ```
 
-### Enabling NaCl Encryption<a name="enabling-nacl-encryption"></a>
+### NaCl Encryption<a name="enabling-nacl-encryption"></a>
 
 1. Set the encryption backend:
 
-   ```
-   XNGIN_SECRETS_BACKEND=nacl
-   ```
+    ```
+    XNGIN_SECRETS_BACKEND=nacl
+    ```
 
 1. Generate a new keyset for your deployment with the CLI tool:
 
-   ```shell
-   uv run xngin-cli create-nacl-keyset
-   ```
+    ```shell
+    uv run xngin-cli create-nacl-keyset
+    ```
 
-   Store the output in the `XNGIN_SECRETS_NACL_KEYSET` environment variable.
+    Store the output in the `XNGIN_SECRETS_NACL_KEYSET` environment variable.
 
-### Enabling Google Cloud KMS<a name="enabling-google-cloud-kms"></a>
+### Google Cloud KMS<a name="enabling-google-cloud-kms"></a>
 
 Setting up Google Cloud KMS requires these steps:
 
@@ -121,7 +107,7 @@ echo secretvalue | \
   uv run --env-file .env xngin-cli decrypt
 ```
 
-### Debugging GCP KMS<a name="debugging-gcp-kms"></a>
+#### Debugging GCP KMS<a name="debugging-gcp-kms"></a>
 
 Adjust gRPC logging verbosity with these environment variables:
 
