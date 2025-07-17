@@ -30,10 +30,9 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - uses: astral-sh/setup-uv@v4
+      - uses: astral-sh/setup-uv@v6
         with:
           version: "0.7.18"
-          enable-cache: true
       - name: run pre-commit checks
         run: uv run pre-commit run --show-diff-on-failure --color=always --all-files
       - name: Build docs
