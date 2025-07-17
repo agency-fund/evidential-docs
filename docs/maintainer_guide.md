@@ -1,7 +1,9 @@
 !!! note
 
     Cheatsheet for anyone who edits, deploys, or rolls back the Evidential docs site
+
     **Repo:** `github.com/evidential-org/evidential-docs`
+
     **Live site:** [https://docs.evidential.dev](https://docs.evidential.dev)
 
 ______________________________________________________________________
