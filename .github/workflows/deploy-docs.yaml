@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - docs
+  pull_request:
+    branches:
+      - docs
 
 permissions:
   contents: write
@@ -33,9 +36,14 @@ jobs:
           enable-cache: true
       - name: run pre-commit checks
         run: uv run pre-commit run --show-diff-on-failure --color=always --all-files
-      - name: Build and push docs version
+      - name: Build docs
+        if: github.event_name == 'pull_request'
+        run: uv run mkdocs build
+      - name: Build and push docs
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: uv run mkdocs gh-deploy --force
       - name: Add CNAME
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: |
           git switch gh-pages
           echo "docs.evidential.dev" > CNAME
