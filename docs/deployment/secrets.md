@@ -14,11 +14,11 @@ We implement encryption-at-rest for:
 
 To accommodate various deployment scenarios, we offer these encryption options:
 
-| Backend                     | Use Case                                         | Description                                                                     |
-| --------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------- |
-| No-op (`noop`)              | Local development only                           | No encryption is applied                                                        |
-| NaCl (`nacl`)               | Traditional web hosts, self-hosting, development | Uses symmetric encryption with a key accessible to the API server               |
-| Google Cloud KMS (`gcpkms`) | GCP deployments                                  | Uses Google Cloud Key Management Service (KMS) to implement envelope encryption |
+| Name             | Backend  | Use Case                                         | Description                                                                     |
+| ---------------- | -------- | ------------------------------------------------ | ------------------------------------------------------------------------------- |
+| No-op            | `noop`   | Local development only                           | No encryption is applied                                                        |
+| NaCl             | `nacl`   | Traditional web hosts, self-hosting, development | Uses symmetric encryption with a key accessible to the API server               |
+| Google Cloud KMS | `gcpkms` | GCP deployments                                  | Uses Google Cloud Key Management Service (KMS) to implement envelope encryption |
 
 ## Algorithm Details<a name="algorithm-details"></a>
 
