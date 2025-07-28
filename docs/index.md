@@ -77,6 +77,10 @@ We combined complementary approaches into one shared platform ([read the blog](h
 - Join the early-partner programme → email [support@evidential.dev](mailto:support@evidential.dev)
 - [Contribute on GitHub](https://github.com/agency-fund/evidential-be)
 
+## Acknowledegments
+
+A heartfelt thank‑you to [Rocket Learning](https://rocketlearning.org/) for serving as our earliest – and bravest – testing ground and design partner. Special thanks as well to [Noora Health](https://noorahealth.org/), [myAgro](https://www.myagro.org/), [Jacaranda Health](https://jacarandahealth.org/) and [Saajha](https://www.linkedin.com/company/saajha/?originalSubdomain=in) for trusting us to run experiments together and for their invaluable feedback along the way.
+
 ______________________________________________________________________
 
 !!! info
