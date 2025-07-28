@@ -17,11 +17,11 @@ migrations.
 
 ## How do we manage schema migrations?<a name="schema-migration"></a>
 
-We are using [Atlas](https://atlasgo.io/) to manage database schema migrations.
+We are using [Atlas](https://atlasgo.io/) to manage database schema migrations. To
+simplify schema management and Atlas configs, we keep all SQLAlchemy table definitions in
+[sqla](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/sqla).
 
-When you make a change to the SQLAlchemy tables
-in [models](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/models), run this command to
-generate migration
+When you make a change to the SQLAlchemy tables, run this command to generate migration
 files for Postgres:
 
 ```shell
