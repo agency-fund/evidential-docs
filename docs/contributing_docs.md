@@ -28,7 +28,13 @@ git checkout docs
 uv sync
 ```
 
-2. Preview locally
+1. Install precommit hooks to this repo
+
+```
+   uv run pre-commit install
+```
+
+1. Preview locally
 
 ```bash
 uv run mkdocs serve
