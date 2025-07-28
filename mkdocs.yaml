@@ -99,6 +99,7 @@ nav:
       - development/sqlalchemy.md
       - development/migration.md
     - Explainers:
+      - development/secrets.md
       - development/task-queues.md
       - development/reading-list.md
       - development/faq.md
