@@ -10,6 +10,10 @@
 
 ______________________________________________________________________
 
+We use [MkDocs](https://www.mkdocs.org/getting-started/) to build our project docs, along with the
+[Material](https://squidfunk.github.io/mkdocs-material/reference/) theme and [custom
+overrides](https://squidfunk.github.io/mkdocs-material/customization/#extending-the-theme).
+
 ## Local setup
 
 1. Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
