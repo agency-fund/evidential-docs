@@ -1,3 +1,5 @@
+# Reading List
+
 We use many advanced features of Pydantic, FastAPI, and SQLAlchemy. Before digging into the code, familiarize yourself
 with these concepts:
 

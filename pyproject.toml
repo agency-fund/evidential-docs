@@ -5,6 +5,7 @@ description = "Documentation for Evidential, an experiments platform for the soc
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "mkdocs-redirects>=1.2.2",
     "mkdocs-glightbox>=0.4.0",
     "mkdocs-material>=9.6.15",
     "mkdocs-open-in-new-tab>=1.0.8",

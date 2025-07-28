@@ -1,4 +1,4 @@
-# Testing<a name="testing"></a>
+# Running Tests<a name="testing"></a>
 
 This is a collection of random tips about testing. Most of the test configurations you will use are already defined
 in the [Taskfile](https://github.com/agency-fund/evidential-be/blob/main/Taskfile.yml).

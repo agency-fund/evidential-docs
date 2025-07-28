@@ -1,3 +1,5 @@
+# Developing Offline
+
 "Airplane Mode" allows the frontend and backend to start up without relying on any internet resources. This allows
 development when disconnected from the internet.
 
