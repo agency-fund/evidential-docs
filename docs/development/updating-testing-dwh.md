@@ -1,4 +1,4 @@
-# Testing Dataset for Testing DWH
+# The Testing Data Warehouse
 
 ## What is the testing DWH?
 

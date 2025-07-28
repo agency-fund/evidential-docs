@@ -1,4 +1,6 @@
-# SQLAlchemy Tips
+# SQLAlchemy
+
+Our application database uses asynchronous SQLAlchemy with Postgres.
 
 ## Preloading & Async
 
@@ -24,7 +26,9 @@ To maintain async correctness, implicit I/O on the application database should b
 
 We support multiple data warehouse backends but not all of them have async drivers for SQLAlchemy. Thus we
 have adopted a convention of running all queries against customer databases in a thread. This allows our request
-threads to remain non-blocking. See [DwhSession](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/dwh/dwh_session.py) for additional details.
+threads to remain non-blocking.
+See [DwhSession](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/dwh/dwh_session.py) for
+additional details.
 
 ## expire_on_commit
 

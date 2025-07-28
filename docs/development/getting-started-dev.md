@@ -1,8 +1,25 @@
+# Getting Started
+
+The Evidential suite has a backend API server (FastAPI) and a frontend web-app (NextJS).
+
+!!! note
+
+    Note: See our [Reading List](reading-list.md) for links to documentation on our open-source tech stack.
+
+## Backend
+
 Follow the steps below to get a local development environment running.
 
 1. Install [Task](https://taskfile.dev/).
 
 1. Install Docker.
+
+1. Check out the [https://github.com/agency-fund/evidential-be](https://github.com/agency-fund/evidential-be) repository:
+
+    ```shell
+    gh repo clone agency-fund/evidential-be
+    cd evidential-be
+    ```
 
 1. Install dependencies (Atlas, uv, Python dependencies) by running:
 
@@ -13,13 +30,7 @@ Follow the steps below to get a local development environment running.
 1. Run the unit tests:
 
     ```shell
-    task test
-    ```
-
-1. Obtain the OIDC development client secret from a teammate and add it to your .env file:
-
-    ```shell
-    echo GOOGLE_OIDC_CLIENT_SECRET=... >> .env
+    task test-airplane
     ```
 
 1. Get familiar with the task runner. Most of the commands you will run are defined in Taskfile.yml. Run:
@@ -31,13 +42,11 @@ Follow the steps below to get a local development environment running.
 1. Start the dev server:
 
     ```shell
-    task start
+    task start-airplane
     ```
 
     This will start the server at `http://localhost:8000`. It stores its state in a local Postgres instance, running in
     Docker, on `localhost:5499`.
-
-1. If you are only working on the UI, you can skip the rest of the instructions.
 
 1. Visit the local interactive OpenAPI docs page: `http://localhost:8000/docs`
 
@@ -47,10 +56,6 @@ Follow the steps below to get a local development environment running.
     uv run pre-commit install
     ```
 
-!!! note
+## Frontend
 
-    Our system uses Google logins for SSO. If you do not have an @agency.fund Google login, run the following command to allow yourself access to the UI:
-
-    ```shell
-    task create-user
-    ```
+See [https://github.com/agency-fund/evidential-fe](https://github.com/agency-fund/evidential-fe).

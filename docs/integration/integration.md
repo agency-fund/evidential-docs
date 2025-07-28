@@ -1,4 +1,4 @@
-# Client Integrator instructions
+# API Integration
 
 Below describes steps typically taken for a client to integrate programmatically with Evidential as
 part of automating the execution of experiments in the client's systems. Portion highlighted in
@@ -7,7 +7,6 @@ light blue denote human interaction with the Evidential UI.
 ```mermaid
 sequenceDiagram
     actor U as User
-#        actor I as Integrator
     participant E as Evidential
     participant CBE as Client Backend
     autonumber
@@ -15,47 +14,46 @@ sequenceDiagram
     rect rgb(245, 255, 255)
         Note over E: via UI
         rect rgb(230, 255, 255)
-            Note over U,E: initial setup
-            U->>E: Add Datasource + Participant Type
-            U->>E: add webhook
-            U->>E: add datasource APIKey
+            Note over U, E: initial setup
+            U ->> E: Add Datasource + Participant Type
+            U ->> E: add webhook
+            U ->> E: add datasource APIKey
         end
-        U->>E: design and commit experiment
+        Note over U, E: experiment setup
+        U ->> E: design and commit experiment
         alt for external assignment post-processing
-            U->>E: download CSV
+            U ->> E: download CSV
         end
 
     end
-    E->>+CBE: notify via POST to webhook
-    CBE-->>-E: status_code: 200
-    CBE->>E: fetch metadata <br> GET /v1/experiments/{experiment_id}
+    Note over E, CBE: Processing Webhook POST & Fetch Assignments
+    E ->>+ CBE: notify via POST to webhook
+    CBE -->>- E: status_code: 200
+    CBE ->> E: fetch metadata <br> GET /v1/experiments/{experiment_id}
     alt bulk assignment fetch
-        CBE->>E: GET /v1/experiments/{experiment_id}/assignments
+        CBE ->> E: GET /v1/experiments/{experiment_id}/assignments
     else individual assignment fetch
-        CBE->>E: GET /v1/experiments/{experiment_id}/assignments/{participant_id}
-        Note over E,CBE: for Online experiments, participants are assigned an arm if none yet
+        CBE ->> E: GET /v1/experiments/{experiment_id}/assignments/{participant_id}
+        Note over E, CBE: for Online experiments, participants are assigned an arm if none yet
     end
 ```
 
-1. Typically an integrator would handle initial configuration of Datasource (data warehouse) and
-    Participant Type (backed by a dwh table) on behalf of the day-to-day users setting up
+1. Initial configuration of Datasource (data warehouse) and
+    Participant Type (backed by a table in the data warehouse). One datasource configuration can be used by many
     experiments.
 
-1. Adding a Webhook (in your Organization settings) is required to receive notifications of
+1. Configuring a Webhook (in your Organization settings) is required to receive notifications of
     particular events. Your backend must expose an endpoint to which Evidential can POST data to, and
-    should validate the Authorization header contains the provided token to ensure requests are
+    should validate the `Webhook-Token` header contains a shared secret to ensure requests are
     legitimate.
 
-1. Adding an API Key (per Datasource; visit its details page) is required to make requests to
+1. Configuring an API Key (per Datasource; visit its details page) is required to make requests to
     Evidential's backend to fetch experiment and assignment information. All API requests should have
     the custom headers `Datasource-ID:` and the generated `X-API-Key:` attached. These IDs are
     available via copy-to-clipboard buttons in the UI.
 
-1. When a user commits an experiment, internally a corresponding `Event` is written to the app db,
-    along with a `Task` to issue a notification to the webhook registered in (2). Users can also see
-    the `experiment.created` events in their Organization's settings page > Recent Events. For more
-    implementation details, see the [task queues
-    docs](https://github.com/agency-fund/xngin/blob/main/docs/TASK-QUEUES.md).
+1. When a user commits an experiment, the client is notified via the configured webhook. For debugging purposes,
+    the history of `experiment.created` webhooks is available in the Evidential UI.
 
 1. (Optional) For Preassigned experiments the user may immediately export a CSV version of the
     participant assignments and any strata for manual uploading to other systems or further
@@ -88,10 +86,15 @@ sequenceDiagram
 - For *Preassigned* experiments, one can look up an individual participant's arm assignment given
     the `experiment_id` and the `participant_id` uniquely identifying it in your system. Requests
     for the same `<experiment_id, participant_id>` will return the same result.
+
 - For *Online* experiments, if the `participant_id` has not been seen yet, Evidential will
-    randomly generate and return an arm assignment per the experiment's design. NOTE: For *Online*
-    experiments, every request to the endpoint will be assigned an arm, so unless traffic volume is
-    very low, it is recommended that you first sample in the client's system the percentage of
-    traffic to route into the experiment, and then make the Evidential request for each (vs e.g.
-    routing 100% of your users into an Evidential experiment in which 90% are in a Control arm and
-    10% in Treatment).
+    randomly generate and return an arm assignment per the experiment's design.
+
+    !!! note
+
+        For *Online*
+        experiments, every request to the endpoint will be assigned an arm, so unless traffic volume is
+        very low, it is recommended that you first sample in the client's system the percentage of
+        traffic to route into the experiment, and then make the Evidential request for each (vs e.g.
+        routing 100% of your users into an Evidential experiment in which 90% are in a Control arm and
+        10% in Treatment).

@@ -1,3 +1,5 @@
+# Contributing to Documentation
+
 !!! note
 
     Cheatsheet for anyone who edits, deploys, or rolls back the Evidential docs site
@@ -7,6 +9,10 @@
     **Live site:** [https://docs.evidential.dev](https://docs.evidential.dev)
 
 ______________________________________________________________________
+
+We use [MkDocs](https://www.mkdocs.org/getting-started/) to build our project docs, along with the
+[Material](https://squidfunk.github.io/mkdocs-material/reference/) theme and [custom
+overrides](https://squidfunk.github.io/mkdocs-material/customization/#extending-the-theme).
 
 ## Local setup
 
@@ -20,11 +26,23 @@ cd evidential-docs
 git checkout docs
 ```
 
+1. Install dependencies
+
+```
+uv sync
+```
+
+1. Install precommit hooks to this repo
+
+```
+   uv run pre-commit install
+```
+
 1. Preview locally
 
 ```bash
 uv run mkdocs serve
-# Served at http://127.0.0.1:8000
+# Default served at http://127.0.0.1:8000; use -a host:port to customize
 ```
 
 ## Routine content update & deploy

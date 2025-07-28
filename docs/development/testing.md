@@ -1,4 +1,4 @@
-# Testing<a name="testing"></a>
+# Running Tests<a name="testing"></a>
 
 This is a collection of random tips about testing. Most of the test configurations you will use are already defined
 in the [Taskfile](https://github.com/agency-fund/evidential-be/blob/main/Taskfile.yml).
@@ -17,10 +17,13 @@ task test
 
 We run unittests with [pytest](https://docs.pytest.org/en/stable/).
 
-The `task test` helper automatically creates a local Postgres instance for testing and creates a testing datawarehouse
-in the "dwh" database from [testing_dwh.csv.zst](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/testdata/testing_dwh.csv.zst) file.
-[testing_sheet.csv](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/testdata/testing_sheet.csv) is the corresponding spreadsheet that simulates a
-typical table configuration for the participant type data above.
+The `task test` helper automatically creates a local Postgres instance for testing and creates a
+testing data warehouse from the file
+[testing_dwh.csv.zst](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/testdata/testing_dwh.csv.zst).
+It creates the "dwh" database, and loads the file's data into a table also named "dwh".
+[xngin.testing.settings.json](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/testdata/xngin.testing.settings.json)
+contains an example of a datasource created in Evidential with a typical participant type
+configuration backed by the table above.
 
 [Various tests](https://github.com/agency-fund/evidential-be/blob/main/.github/workflows/test.yaml) are also run as part of our GitHub action test workflow.
 
@@ -67,10 +70,10 @@ You can also trigger the BigQuery integration tests to run in GHA by putting `ru
 
 ## API Test Scripts<a name="api-test-scripts"></a>
 
-See [apitest.strata.xurl](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/routers/stateless/testdata/apitest.strata.xurl) for a complete example
-of how to write an
-API test script. We use a small custom
-file format called [Xurl](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/testing/xurl.py).
+One can write individual test scripts that define the expected response for an http request. See
+[apitest.strata.xurl](https://github.com/agency-fund/evidential-be/blob/aa7395c5ab444dfec875ef34fac6c39359cab2ac/src/xngin/apiserver/routers/stateless/testdata/apitest.strata.xurl)
+for a complete example of how to write an API test script. We use a small custom file format called
+[Xurl](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/testing/xurl.py).
 
 `test_api.py` tests that use `testdata/*.xurl` data can be automatically updated with the actual server results by
 prefixing your pytest run with the environment variable: `UPDATE_API_TESTS=1`.
@@ -113,8 +116,8 @@ xngin-cli create-testing-dwh --dsn 'bigquery://xngin-development-dc/ds'
 The tool is also used for interacting with the BQ API directly
 (i.e. `bigquery_dataset_set_default_expiration`).
 
-These commands use Google's [Application Default Credentials]
-(https://cloud.google.com/docs/authentication/application-default-credentials) process.
+These commands use the process defined in Google's
+[Application Default Credentials](https://cloud.google.com/docs/authentication/application-default-credentials).
 
 !!! note
 

@@ -14,6 +14,9 @@ theme:
   custom_dir: overrides
   icon:
     logo: material/cog
+    admonition:
+      note: material/alert-circle
+    annotation: material/help-circle
   font:
     text: "Inter"
     code: "Roboto Mono"
@@ -36,11 +39,6 @@ theme:
     - navigation.sections
     - navigation.indexes
     - navigation.top
-
-  icon:
-    admonition:
-      note: material/alert-circle
-    annotation: material/help-circle
 
 extra_css:
   - stylesheets/extra.css
@@ -78,31 +76,33 @@ plugins:
   - blog:
       post_excerpt: required
   - open-in-new-tab
+  - redirects:
+      redirect_maps:
+        'welcome/index.md': 'index.md'
 
 nav:
-  - Welcome to Evidential:
-    - Overview: welcome/index.md
-    - Getting Started: welcome/getting-started.md
-    - Architecture: welcome/architecture.md
-  - Deploying:
-    - Overview: deployment/overview.md
-    - Secrets: deployment/secrets.md
+  - Welcome:
+    - index.md
+    - welcome/getting-started.md
   - Developing:
-    - Getting started: development/getting-started-dev.md
-    - Airplane Mode: development/airplane-mode.md
-    - Contributing: development/contributing.md
-    - Contributing to docs: maintainer_guide.md
-    - Testing:
-      - Overview: development/testing.md
-      - Updating Testing DWH: development/updating-testing-dwh.md
-    - Other Topics:
-      - Migration: development/migration.md
-      - SQLAlchemy: development/sqlalchemy.md
-      - Task-Queues: development/task-queues.md
-      - Reading List: development/reading-list.md
-      - FAQs: development/faq.md
+    - development/getting-started-dev.md
+    - Contributing:
+      - development/contributing-dev.md
+      - contributing-docs.md
+    - How-To Guides:
+      - development/airplane-mode.md
+      - development/enabling-oidc.md
+      - development/testing.md
+      - development/updating-testing-dwh.md
+      - development/sqlalchemy.md
+      - development/migration.md
+    - Explainers:
+      - development/secrets.md
+      - development/task-queues.md
+      - development/reading-list.md
+      - development/faq.md
   - Integrating:
-    - Overview: integration/overview.md
-    - How it works: integration/integration.md
-  - Latest Updates: blog/index.md
+    - integration/overview.md
+    - integration/integration.md
+#  - Latest Updates: blog/index.md
   - Contact us: contact.md
