@@ -14,6 +14,9 @@ theme:
   custom_dir: overrides
   icon:
     logo: material/cog
+    admonition:
+      note: material/alert-circle
+    annotation: material/help-circle
   font:
     text: "Inter"
     code: "Roboto Mono"
@@ -36,11 +39,6 @@ theme:
     - navigation.sections
     - navigation.indexes
     - navigation.top
-
-  icon:
-    admonition:
-      note: material/alert-circle
-    annotation: material/help-circle
 
 extra_css:
   - stylesheets/extra.css
