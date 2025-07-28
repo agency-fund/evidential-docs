@@ -88,7 +88,7 @@ nav:
     - development/getting-started-dev.md
     - Contributing:
       - development/contributing.md
-      - maintainer_guide.md
+      - contributing_docs.md
     - How-To Guides:
       - development/airplane-mode.md
       - development/enabling-oidc.md

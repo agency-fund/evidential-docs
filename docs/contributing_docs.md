@@ -22,11 +22,17 @@ cd evidential-docs
 git checkout docs
 ```
 
-1. Preview locally
+1. Install dependencies
+
+```
+uv sync
+```
+
+2. Preview locally
 
 ```bash
 uv run mkdocs serve
-# Served at http://127.0.0.1:8000
+# Default served at http://127.0.0.1:8000; use -a host:port to customize
 ```
 
 ## Routine content update & deploy
