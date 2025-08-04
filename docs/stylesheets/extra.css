@@ -68,20 +68,15 @@ a:hover {
   gap: 1rem;
 }
 
-/* 2 · labels */
-.contact-form .form-field label {
-  display: block;
-  margin-bottom: 0.4rem;
-  color: var(--ev-color-text);
-  font-weight: 500;
+.contact-form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-/* 3 · inputs & textarea */
+/* 2 · inputs & textarea */
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
-  box-sizing: border-box;
-  font: inherit;
   background: var(--ev-color-bg);
   border: 1px solid var(--ev-color-brand);
   border-radius: var(--ev-radius-small);
@@ -89,13 +84,13 @@ a:hover {
   color: var(--ev-color-text);
 }
 
-/* 4 · focus state */
+/* 3 · focus state */
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
 }
 
-/* 5 · submit button */
+/* 4 · submit button */
 .contact-form .form-submit {
   background: var(--ev-color-brand);
   border: none;
