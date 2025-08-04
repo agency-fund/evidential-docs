@@ -1,53 +1,111 @@
-/* 1. form container */
-.contact-form form {
-  border: 1px solid var(--md-accent-fg-color);
-  border-radius: 6px;
-  padding: 1.5rem;
-  background: var(--md-default-fg-color--lightest);
+:root {
+  /* ── BRAND & GLOBAL ───────────────────────────────────────── */
+  --ev-color-brand: #3e63dd;
+  --ev-color-on-brand: #ffffff;
+
+  /* Typography */
+  --ev-heading-font-weight: 400;
+
+  /* Border radius */
+  --ev-radius-small: 4px;
 }
 
-/* 2. labels */
+/* ── LIGHT   (default) ─────────────────────────────────────── */
+[data-md-color-scheme="default"] {
+  /* Scheme colours */
+  --ev-color-bg: #ffffff;
+  --ev-color-text: #1c2024;
+
+  /* Bridge to Material tokens */
+  --md-primary-fg-color: var(--ev-color-brand);
+  --md-accent-fg-color: var(--ev-color-brand);
+  --md-footer-bg-color: var(--ev-color-brand);
+  --md-footer-bg-color--dark: var(--ev-color-brand);
+
+  --md-default-bg-color: var(--ev-color-bg);
+  --md-typeset-color: var(--ev-color-text);
+  --md-default-fg-color--light: var(--ev-color-text);
+}
+
+/* ── DARK   (slate) ───────────────────────────────────────── */
+[data-md-color-scheme="slate"] {
+  /* Scheme colours */
+  --ev-color-bg: #080808;
+  --ev-color-text: #ffffff;
+
+  /* Bridge to Material tokens */
+  --md-default-bg-color: var(--ev-color-bg);
+  --md-typeset-color: var(--ev-color-text);
+  --md-default-fg-color--light: var(--ev-color-text);
+
+  --md-primary-fg-color: var(--ev-color-brand);
+  --md-accent-fg-color: var(--ev-color-brand);
+  --md-footer-bg-color: var(--ev-color-brand);
+  --md-footer-bg-color--dark: var(--ev-color-brand);
+}
+
+/* ── HEADINGS ─────────────────────────────────────────────── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--ev-heading-font-weight) !important;
+}
+
+/* ── LINKS ─────────────────────────────────────────────────── */
+a:hover {
+  text-decoration: underline !important;
+}
+
+/* ── CONTACT FORM ─────────────────────────────────────────── */
+
+/* 1 · container */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* 2 · labels */
 .contact-form .form-field label {
   display: block;
   margin-bottom: 0.4rem;
-  color: var(--md-default-fg-color);
+  color: var(--ev-color-text);
   font-weight: 500;
-  margin-top: 0.7rem;
 }
 
-/* 3. inputs & textarea */
+/* 3 · inputs & textarea */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   box-sizing: border-box;
   font: inherit;
-  background: var(--md-default-bg-color);
-  border: 1px solid var(--md-default-fg-color--lighter);
-  border-radius: 4px;
+  background: var(--ev-color-bg);
+  border: 1px solid var(--ev-color-brand);
+  border-radius: var(--ev-radius-small);
   padding: 0.5rem 0.75rem;
-  color: var(--md-default-fg-color);
-  transition: border-color 0.2s;
+  color: var(--ev-color-text);
 }
 
-/* 4. focus state */
+/* 4 · focus state */
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: var(--md-primary-fg-color);
-  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
 }
 
-/* 5. submit button spacing */
+/* 5 · submit button */
 .contact-form .form-submit {
-  margin-top: 1rem;
-  background: var(--md-accent-fg-color);
+  background: var(--ev-color-brand);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--ev-radius-small);
   padding: 0.75rem 1.5rem;
-  color: var(--md-typeset-fg-color);
+  color: var(--ev-color-on-brand);
+  align-self: flex-end;
+  cursor: pointer;
 }
 
 .contact-form .form-submit:hover {
   opacity: 0.9;
-  cursor: pointer;
 }

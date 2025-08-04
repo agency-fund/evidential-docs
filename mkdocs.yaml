@@ -13,12 +13,12 @@ theme:
   name: material
   custom_dir: overrides
   icon:
-    logo: material/cog
+    logo: material/lightning-bolt
     admonition:
       note: material/alert-circle
     annotation: material/help-circle
   font:
-    text: "Inter"
+    text: "Montserrat"
     code: "Roboto Mono"
   palette:
     - scheme: slate # Palette toggle for dark mode
@@ -39,6 +39,7 @@ theme:
     - navigation.sections
     - navigation.indexes
     - navigation.top
+    - navigation.footer
 
 extra_css:
   - stylesheets/extra.css
@@ -46,6 +47,9 @@ extra_css:
 markdown_extensions:
   - tables
   - admonition
+  - pymdownx.snippets:
+      base_path: ["docs"]
+      check_paths: true
   - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
@@ -67,8 +71,6 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
 
 plugins:
   - glightbox
@@ -78,31 +80,31 @@ plugins:
   - open-in-new-tab
   - redirects:
       redirect_maps:
-        'welcome/index.md': 'index.md'
+        "welcome/index.md": "index.md"
 
 nav:
   - Welcome:
-    - index.md
-    - welcome/getting-started.md
+      - index.md
+      - welcome/getting-started.md
   - Developing:
-    - development/getting-started-dev.md
-    - Contributing:
-      - development/contributing-dev.md
-      - contributing-docs.md
-    - How-To Guides:
-      - development/airplane-mode.md
-      - development/enabling-oidc.md
-      - development/testing.md
-      - development/updating-testing-dwh.md
-      - development/sqlalchemy.md
-      - development/migration.md
-    - Explainers:
-      - development/secrets.md
-      - development/task-queues.md
-      - development/reading-list.md
-      - development/faq.md
+      - development/getting-started-dev.md
+      - Contributing:
+          - development/contributing-dev.md
+          - contributing-docs.md
+      - How-To Guides:
+          - development/airplane-mode.md
+          - development/enabling-oidc.md
+          - development/testing.md
+          - development/updating-testing-dwh.md
+          - development/sqlalchemy.md
+          - development/migration.md
+      - Explainers:
+          - development/secrets.md
+          - development/task-queues.md
+          - development/reading-list.md
+          - development/faq.md
   - Integrating:
-    - integration/overview.md
-    - integration/integration.md
-#  - Latest Updates: blog/index.md
+      - integration/overview.md
+      - integration/integration.md
+  #  - Latest Updates: blog/index.md
   - Contact us: contact.md
