@@ -4,10 +4,6 @@ site_url: https://docs.evidential.dev/
 repo_url: https://github.com/agency-fund/evidential-be
 extra:
   generator: false
-  social:
-    - icon: material/shield-lock
-      link: https://www.idinsight.org/about/privacy-policy/
-      name: Privacy Policy
 
 theme:
   name: material

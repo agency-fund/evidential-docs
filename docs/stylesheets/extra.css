@@ -2,6 +2,7 @@
   /* ── BRAND & GLOBAL ───────────────────────────────────────── */
   --ev-color-brand: #3e63dd;
   --ev-color-on-brand: #ffffff;
+  --ev-color-link--dark: #9eb1ff;
 
   /* Typography */
   --ev-heading-font-weight: 400;
@@ -21,7 +22,6 @@
   --md-accent-fg-color: var(--ev-color-brand);
   --md-footer-bg-color: var(--ev-color-brand);
   --md-footer-bg-color--dark: var(--ev-color-brand);
-
   --md-default-bg-color: var(--ev-color-bg);
   --md-typeset-color: var(--ev-color-text);
   --md-default-fg-color--light: var(--ev-color-text);
@@ -37,7 +37,7 @@
   --md-default-bg-color: var(--ev-color-bg);
   --md-typeset-color: var(--ev-color-text);
   --md-default-fg-color--light: var(--ev-color-text);
-
+  --md-typeset-a-color: var(--ev-color-link--dark);
   --md-primary-fg-color: var(--ev-color-brand);
   --md-accent-fg-color: var(--ev-color-brand);
   --md-footer-bg-color: var(--ev-color-brand);
