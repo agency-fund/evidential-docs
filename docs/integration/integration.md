@@ -1,5 +1,11 @@
 # API Integration
 
+## Documentation
+
+Our interactive API documentation is available here: [https://api.evidential.dev/docs](https://api.evidential.dev/docs)
+
+## Example Integration
+
 Below describes steps typically taken for a client to integrate programmatically with Evidential as
 part of automating the execution of experiments in the client's systems. Portion highlighted in
 light blue denote human interaction with the Evidential UI.
