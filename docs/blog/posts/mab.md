@@ -17,8 +17,9 @@ We’re excited to announce that **Evidential now supports Multi-Armed Bandit an
 
 ## What are Bandits?
 
-Think of each version of your intervention as a slot machine (an “arm”).  
-A **multi-armed bandit** algorithm learns which arm pays off best and automatically directs more participants toward it, balancing exploration and exploitation.
+Think of each version of your intervention as "arm" in a slot machine. Your "reward" when you pull the arm is the outcome you observe when you deploy your intervention to your beneficiaries.
+
+A **multi-armed bandit** algorithm learns which arm pays off best and automatically directs more participants toward it -- so you optimize your interventions on the go, rather than at the end of your experiment.
 
 A **contextual bandit** goes one step further: it takes into account **information about participants** — such as demographics or behavior — to decide which arm is likely to work best for *that specific user*.
 
