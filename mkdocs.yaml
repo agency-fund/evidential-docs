@@ -102,5 +102,5 @@ nav:
   - Integrating:
       - integration/overview.md
       - integration/integration.md
-  #  - Latest Updates: blog/index.md
+  - What's New: blog/index.md
   - Contact us: contact.md
