@@ -61,8 +61,6 @@ Method 2: Trigger via GitHub UI
 1. Select the PR's branch name
 1. Tick the "bq integration" box.
 
-You can also trigger the BigQuery integration tests to run in GHA by putting `run:bqintegration` in your PR comment.
-
 ## Showing additional test output<a name="showing-additional-test-output"></a>
 
 `pytest -rA` to print out _all_ stdout from your tests; `-rx` for just those failing. (See
