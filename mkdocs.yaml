@@ -8,11 +8,10 @@ extra:
 theme:
   name: material
   custom_dir: overrides
-  icon:
-    logo: material/lightning-bolt
-    admonition:
+  logo: media/img/evidential-logo.svg
+  admonition:
       note: material/alert-circle
-    annotation: material/help-circle
+      annotation: material/help-circle
   font:
     text: "Montserrat"
     code: "Roboto Mono"
