@@ -13,7 +13,7 @@ theme:
       note: material/alert-circle
       annotation: material/help-circle
   font:
-    text: "Montserrat"
+    text: "Open Sans"
     code: "Roboto Mono"
   palette:
     - scheme: slate # Palette toggle for dark mode
