@@ -104,3 +104,28 @@ a:hover {
 .contact-form .form-submit:hover {
   opacity: 0.9;
 }
+
+/* ── HEADER/NAV ───────────────────────────────────────────────────── */
+.md-header__nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.md-header__controls {
+  display: flex;
+}
+
+.md-nav--primary {
+  position: relative;
+}
+
+.md-nav--primary .md-nav__title {
+  height: auto;
+  padding: 20px 20px 20px 0px;
+}
+
+.md-nav--primary .md-nav__title .md-logo {
+  position: relative;
+  padding: 0;
+}
