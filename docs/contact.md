@@ -1,20 +1,21 @@
-We’d love to hear from you. You can email us at [support@evidential.dev](mailto:support@evidential.dev) or fill out the
-form below:
+We’d love to hear from you. You can email us at
+<a href="mailto:support@evidential.dev">support@evidential.dev</a> or fill out the form below:
 
-<div class="contact-form">
-<form action="https://formspree.io/f/mldnqgra" method="POST" novalidate>
-<div class="form-field">
-  <label for="cf-name">Your Name</label>
-  <input id="cf-name" type="text" name="name" required/>
-</div>
-<div class="form-field">
-  <label for="cf-email">Your Email</label>
-  <input id="cf-email" type="email" name="_replyto" required>
-</div>
-<div class="form-field">
-  <label for="cf-msg">Your Message</label>
-  <textarea id="cf-msg" name="message" rows="5" required></textarea>
-</div>
-<button type="submit" class="form-submit">Send</button>
-</form>
+<div style="
+  background-color: #fff;
+  color: #000;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  max-width: 100%;
+">
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSdii1scRl3NVS0X_VNJuYN-JZbgTQ8IloG35DwYx2NhvqFfBQ/viewform?embedded=true"
+    width="100%"
+    height="900"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0">
+    Loading…
+  </iframe>
 </div>
