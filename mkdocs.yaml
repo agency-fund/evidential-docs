@@ -101,5 +101,8 @@ nav:
   - Integrating:
       - integration/overview.md
       - integration/integration.md
+  - Analyzing:
+      - analytics/data_analysis.md
+      - analytics/data_storage.md
   - What's New: blog/index.md
   - Contact us: contact.md
