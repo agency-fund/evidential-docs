@@ -1,20 +1,26 @@
 # Reading List
 
-We use many advanced features of Pydantic, FastAPI, and SQLAlchemy. Before digging into the code, familiarize yourself
-with these concepts:
+Evidential uses the tools, frameworks, and concepts linked below extensively throughout the application. We recommend
+familiarizing yourself with these technologies before developing or deploying Evidential.
 
-- Pydantic:
-    - [Pydantic models](https://docs.pydantic.dev/2.11/concepts/models/)
-    - [Custom validation](https://docs.pydantic.dev/2.11/concepts/validators/)
-    - [Serialization](https://docs.pydantic.dev/2.11/concepts/serialization/)
-    - [Annotated Type](https://docs.pydantic.dev/2.11/concepts/fields/#using-annotated)
-    - [Composing Types](https://docs.pydantic.dev/2.11/concepts/types/#composing-types-via-annotated)
-- FastAPI:
-    - [FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/first-steps/)
-    - [Adding metadata using `Annotated`](https://fastapi.tiangolo.com/python-types/#type-hints-with-metadata-annotations)
-    - [Dependency Injection](https://fastapi.tiangolo.com/tutorial/dependencies/)
-- Tooling:
+- Frontend:
+    - [NextJS](https://nextjs.org/)
+    - [Orval](https://orval.dev/)
+- Backend:
     - [Atlas](https://atlasgo.io/)
     - [SQLAlchemy 2.0](https://docs.sqlalchemy.org/en/20/tutorial/index.html)
+    - [loguru](https://github.com/Delgan/loguru)
+    - Pydantic:
+        - [Pydantic models](https://docs.pydantic.dev/2.11/concepts/models/)
+        - [Custom validation](https://docs.pydantic.dev/2.11/concepts/validators/)
+        - [Serialization](https://docs.pydantic.dev/2.11/concepts/serialization/)
+        - [Annotated Type](https://docs.pydantic.dev/2.11/concepts/fields/#using-annotated)
+        - [Composing Types](https://docs.pydantic.dev/2.11/concepts/types/#composing-types-via-annotated)
+    - FastAPI:
+        - [FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/first-steps/)
+        - [Adding metadata using `Annotated`](https://fastapi.tiangolo.com/python-types/#type-hints-with-metadata-annotations)
+        - [Dependency Injection](https://fastapi.tiangolo.com/tutorial/dependencies/)
+- Tooling:
+    - [Task](https://taskfile.dev/)
     - [pre-commit](https://pre-commit.com/)
     - [ruff](https://github.com/astral-sh/ruff)

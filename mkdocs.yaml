@@ -89,6 +89,7 @@ nav:
       - How-To Guides:
           - development/airplane-mode.md
           - development/enabling-oidc.md
+          - development/error-reporting.md
           - development/testing.md
           - development/updating-testing-dwh.md
           - development/sqlalchemy.md

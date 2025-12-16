@@ -13,13 +13,13 @@ You might see this error:
 >
 > pg_config is required to build psycopg2 from source.
 
-The fix will depend on your specific environment.
+The fix will depend on your operating system.
 
 ### Linux
 
-1. If on Linux, try: `sudo apt install -y libpq-dev` and then re-install dependencies.
-1. See https://www.psycopg.org/docs/install.html.
-1. See https://www.psycopg.org/docs/faq.html.
+1. Run: `sudo apt install -y libpq-dev python3-dev build-essential` and then re-install dependencies.
+1. See [https://www.psycopg.org/docs/install.html](https://www.psycopg.org/docs/install.html).
+1. See [https://www.psycopg.org/docs/faq.html](https://www.psycopg.org/docs/faq.html).
 
 ### OSX<a name="osx"></a>
 

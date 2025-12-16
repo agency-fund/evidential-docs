@@ -1,4 +1,4 @@
-# The Testing Data Warehouse
+# Testing Data Warehouse
 
 ## What is the testing DWH?
 

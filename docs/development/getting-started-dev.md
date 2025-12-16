@@ -6,13 +6,19 @@ The Evidential suite has a backend API server (FastAPI) and a frontend web-app (
 
     Note: See our [Reading List](reading-list.md) for links to documentation on our open-source tech stack.
 
-## Backend
-
-Follow the steps below to get a local development environment running.
+## Prerequisites
 
 1. Install [Task](https://taskfile.dev/).
 
 1. Install Docker.
+
+1. Install [Git LFS](https://git-lfs.com/).
+
+1. Install [NodeJS](https://nodejs.org/en/download) version 22.
+
+## Backend
+
+Follow the steps below to get a local development environment running.
 
 1. Check out the [https://github.com/agency-fund/evidential-be](https://github.com/agency-fund/evidential-be) repository:
 
@@ -24,6 +30,7 @@ Follow the steps below to get a local development environment running.
 1. Install dependencies (Atlas, uv, Python dependencies) by running:
 
     ```shell
+    git lfs install
     task install-dependencies
     ```
 
@@ -39,7 +46,7 @@ Follow the steps below to get a local development environment running.
     task --list
     ```
 
-1. Start the dev server:
+1. Start the backend server:
 
     ```shell
     task start-airplane
@@ -58,4 +65,21 @@ Follow the steps below to get a local development environment running.
 
 ## Frontend
 
-See [https://github.com/agency-fund/evidential-fe](https://github.com/agency-fund/evidential-fe).
+1. Check out the [https://github.com/agency-fund/evidential-fe](https://github.com/agency-fund/evidential-fe) repository:
+
+    ```shell
+    gh repo clone agency-fund/evidential-fe
+    cd evidential-fe
+    ```
+
+1. Switch to node version 22:
+
+    ```shell
+    nvm use 22
+    ```
+
+1. Start the frontend server:
+
+    ```shell
+    task start-airplane
+    ```
