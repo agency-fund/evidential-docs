@@ -106,4 +106,8 @@ nav:
       - analytics/data_analysis.md
       - analytics/data_storage.md
   - What's New: blog/index.md
-  - Contact us: contact.md
+  - Contact us:
+      - contact.md
+      - Legal:
+          - Terms of Service: legal/terms.md
+          - Privacy Policy: legal/privacy.md
