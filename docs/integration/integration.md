@@ -108,7 +108,8 @@ sequenceDiagram
 ## Additional developer notes
 
 ### Request Encapsulation Middleware
-Evidential's API server includes middleware that allows clients to encapsulate their request payloads inside a wrapper object. This is useful when the client application has a fixed request format that cannot be changed to match Evidential's expected schema.
+
+Evidential's API server includes middleware that allows clients to encapsulate their request payloads inside a wrapper object. This is useful when the client application you are using to send requests to Evidential has a fixed request format that cannot be changed to match Evidential's expected schema.
 
 For example, if the client application sends requests in the following format:
 
@@ -131,10 +132,11 @@ But the expected format by Evidential's API is:
   "other_field": "value"
 }
 ```
+
 The client can configure the middleware to extract the actual payload using a JSON Pointer path as follows:
 
 ```
 path/to/endpoint?_unwrap=/data/payload
 ```
-This will instruct the middleware to unwrap the request body and forward only the inner payload to the API endpoint.
 
+This will instruct the middleware to unwrap the request body and forward only the inner payload to the API endpoint.
