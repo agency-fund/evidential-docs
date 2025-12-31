@@ -104,3 +104,37 @@ sequenceDiagram
         traffic to route into the experiment, and then make the Evidential request for each (vs e.g.
         routing 100% of your users into an Evidential experiment in which 90% are in a Control arm and
         10% in Treatment).
+
+## Additional developer notes
+
+### Request Encapsulation Middleware
+Evidential's API server includes middleware that allows clients to encapsulate their request payloads inside a wrapper object. This is useful when the client application has a fixed request format that cannot be changed to match Evidential's expected schema.
+
+For example, if the client application sends requests in the following format:
+
+```json
+{
+  "data": {
+    "payload": {
+      "participant_id": "12345",
+      "other_field": "value"
+    }
+  }
+}
+```
+
+But the expected format by Evidential's API is:
+
+```json
+{
+  "participant_id": "12345",
+  "other_field": "value"
+}
+```
+The client can configure the middleware to extract the actual payload using a JSON Pointer path as follows:
+
+```
+path/to/endpoint?_unwrap=/data/payload
+```
+This will instruct the middleware to unwrap the request body and forward only the inner payload to the API endpoint.
+
