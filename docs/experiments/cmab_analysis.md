@@ -39,11 +39,9 @@ We use Thompson sampling to update these probabilities, similar to MABs. The cru
 
     Given $N$ variants of a feature or implementation, and assuming that context for a user is captured by a vector $\mathbf{x}$, the outcome $y$ has a likelihood distribution given by:
     $$
-
     \begin{equation}
     y \sim p(f(\theta_i \cdot \mathbf{x}))
     \end{equation}
-
     $$
     If $y$ where binary-values, $p$ denotes the Bernoulli distribution, $f$ the sigmoid function and $\theta_i \cdot \mathbf{x}$ the log odds of the outcome $y$ under variant $i (= 1, \ldots .N)$, dependent on the user context $\mathbf{x}$.
 
@@ -54,7 +52,6 @@ We use Thompson sampling to update these probabilities, similar to MABs. The cru
     \begin{equation}
     \theta_i \sim \mathcal{N} (\mathbf{\mu}_i, \Sigma_i^{-1})
     \end{equation}
-
     $$
     While configuring the experiment, we require users to set a _scalar_ value of mean $m_i$ and standard deviation $\sigma_i$, which we then expand into vector mean $\mu_i = \begin{bmatrix} 1 \\ 1 \end{bmatrix} \cdot m_i$ and diagonal covariance matrix $\Sigma = \begin{bmatrix} \sigma_i & 0 \\ 0 & \sigma_i \end{bmatrix}$.
 
@@ -74,11 +71,9 @@ We use Thompson sampling to update these probabilities, similar to MABs. The cru
     \mu^{(\text{post})}_i = \Sigma^{\text{post}}_i \big(\Sigma_i^{-1} \mu_i + \mathbf{x}\ y \big)
     $$
     $$
-
     \begin{equation}
     \theta^{(\text{post})}_i \sim N (\mu^{(\text{post})}_i, (\sigma^{(\text{post})}_i)^2)
     \end{equation}
-
     $$
     This is now the new prior from which we sample while choosing variants or arms to serve the user.
 
@@ -87,21 +82,20 @@ We use Thompson sampling to update these probabilities, similar to MABs. The cru
 
     We will instead use the Laplace approximation i.e. we will _assume_ that the posterior distribution is a Gaussian whose mean is given by the _maximum a posteriori_ (MAP) estimate $\theta_i^*$, and whose covariance is given by the inverse Hessian of the Bernoulli log likelihood, evaluated at $\theta_i^*$ i.e. for $M$ context-observations pairs $\{\mathbf{x}, y\}_{j=1}^M$ the log likelihood can be written down as follows:
     $$
-
-    \begin{align*}
-    \log \mathcal{L} &= \sum_{j=1}^M \log p(y_j | f(\theta_i \cdot \mathbf{x}_j)) \\
-    &= \sum_j y_j \log(\theta_i \cdot \mathbf{x}_j) + (1 - y_j) \log (1 - \theta_i \cdot \mathbf{x}_j)
-    \end{align*}
-
+    \log \mathcal{L} = \sum_{j=1}^M \log p(y_j | f(\theta_i \cdot \mathbf{x}_j))
     $$
+    $$
+    = \sum_j y_j \log(\theta_i \cdot \mathbf{x}_j) + (1 - y_j) \log (1 - \theta_i \cdot \mathbf{x}_j)
+    $$
+
     Then we calculate:
+
+    $$
+    \mu_i^{\text(post)} = \theta_i^* = \underset{\theta_i}{\text{argmax}} \log \mathcal{L}
     $$
 
-    \begin{align*}
-    \mu_i^{\text(post)} &= \theta_i^* = \underset{\theta_i}{\text{argmax}} \log \mathcal{L}  \\
-    (\Sigma_i^{\text{post}})^{-1} &= (\Sigma_i^*)^{-1} = \frac{d^2}{d\theta_i^2} \log \mathcal{L} \ \bigg|_{\theta_i^*}
-    \end{align*}
-
+    $$
+    (\Sigma_i^{\text{post}})^{-1} = (\Sigma_i^*)^{-1} = \frac{d^2}{d\theta_i^2} \log \mathcal{L} \ \bigg|_{\theta_i^*}
     $$
 
     We update these parameters by repeating the MAP estimation every time a new outcome is logged.
