@@ -6,7 +6,7 @@ What we store:
 
 ______________________________________________________________________
 
-## ✅ Aggregared Data
+## ✅ Aggregated Data
 
 We mostly only **anonymized and aggregated** information in a **PostgreSQL application database**, such as:
 

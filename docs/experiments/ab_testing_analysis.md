@@ -1,6 +1,6 @@
-# Data Analysis
+# A/B Testing Data Analysis
 
-This page answers the most common questions about how Evidential handles analytics, outlining the statistical logic and assumptions that power Evidential’s experiment engine.
+This page answers the most common questions about how Evidential handles analytics for A/B testing, outlining the statistical logic and assumptions that power these experiments in Evidential’s experiment engine.
 
 ______________________________________________________________________
 

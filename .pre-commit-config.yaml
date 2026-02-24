@@ -28,6 +28,7 @@ repos:
     rev: 83dc2ce5ca115d3390b9b5561d2898366faf0742  # frozen: 0.7.22
     hooks:
       - id: mdformat
+        exclude: ^docs/experiments/
         additional_dependencies:
           - git+https://github.com/Freed-Wu/mdformat-ruff@6cd00a4d513758d487fa782ab4cac8f1a61e842d   # 0.1.3
           - git+https://github.com/KyleKing/mdformat-gfm-alerts@989aa51cf459559af5d3dae948cbeeab712bd186  # 2.0.0

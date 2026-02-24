@@ -39,6 +39,11 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
 markdown_extensions:
   - tables
   - admonition
@@ -46,6 +51,8 @@ markdown_extensions:
       base_path: ["docs"]
       check_paths: true
   - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -102,9 +109,12 @@ nav:
   - Integrating:
       - integration/overview.md
       - integration/integration.md
-  - Analyzing:
-      - analytics/data_analysis.md
-      - analytics/data_storage.md
+  - Experimenting:
+      - experiments/overview.md
+      - experiments/ab_testing_analysis.md
+      - experiments/mab_analysis.md
+      - experiments/cmab_analysis.md
+      - experiments/data_storage.md
   - What's New: blog/index.md
   - Contact us:
       - contact.md
