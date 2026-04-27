@@ -66,18 +66,6 @@ Method 2: Trigger via GitHub UI
 `pytest -rA` to print out _all_ stdout from your tests; `-rx` for just those failing. (See
 [docs](https://docs.pytest.org/en/latest/how-to/output.html#producing-a-detailed-summary-report) for more info.)
 
-## API Test Scripts<a name="api-test-scripts"></a>
-
-One can write individual test scripts that define the expected response for an http request. See
-[apitest.strata.xurl](https://github.com/agency-fund/evidential-be/blob/aa7395c5ab444dfec875ef34fac6c39359cab2ac/src/xngin/apiserver/routers/stateless/testdata/apitest.strata.xurl)
-for a complete example of how to write an API test script. We use a small custom file format called
-[Xurl](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/testing/xurl.py).
-
-`test_api.py` tests that use `testdata/*.xurl` data can be automatically updated with the actual server results by
-prefixing your pytest run with the environment variable: `UPDATE_API_TESTS=1`.
-
-Or just run `task update-api-tests`.
-
 ## Loading the testing DWH with a different schema?<a name="loading-the-testing-dwh-with-a-different-schema"></a>
 
 Use the CLI command:
