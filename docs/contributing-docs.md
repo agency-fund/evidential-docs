@@ -4,7 +4,7 @@
 
     Cheatsheet for anyone who edits, deploys, or rolls back the Evidential docs site
 
-    **Repo:** `github.com/evidential-org/evidential-docs`
+    **Repo:** `github.com/agency-fund/evidential-docs`
 
     **Live site:** [https://docs.evidential.dev](https://docs.evidential.dev)
 
@@ -21,7 +21,7 @@ overrides](https://squidfunk.github.io/mkdocs-material/customization/#extending-
 1. Clone and switch to source branch
 
 ```bash
-git clone git@github.com:evidential-org/evidential-docs.git
+git clone git@github.com:agency-fund/evidential-docs.git
 cd evidential-docs
 git checkout docs
 ```
