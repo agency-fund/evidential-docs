@@ -22,10 +22,10 @@ Your ideas, code, and feedback are essential to its success.
 
 ## The repositories
 
-| Repository | What it is |
-| --- | --- |
-| [evidential-be](https://github.com/agency-fund/evidential-be) | The backend: a FastAPI API server, stats engine, and task queue (Python) |
-| [evidential-fe](https://github.com/agency-fund/evidential-fe) | The frontend: a Next.js admin web app (TypeScript) |
+| Repository                                                        | What it is                                                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [evidential-be](https://github.com/agency-fund/evidential-be)     | The backend: a FastAPI API server, stats engine, and task queue (Python)                        |
+| [evidential-fe](https://github.com/agency-fund/evidential-fe)     | The frontend: a Next.js admin web app (TypeScript)                                              |
 | [evidential-docs](https://github.com/agency-fund/evidential-docs) | This documentation site (MkDocs) — see [Contributing to Documentation](../contributing-docs.md) |
 
 ## 1. Fork and clone
@@ -88,7 +88,7 @@ saves you a review round‑trip.
 1. Open a **pull request** against `main` on the upstream repository.
 1. Fill in the PR template — including the checklist — and reference any related issues.
 1. A maintainer will review your PR, request changes if needed, and merge when ready.
-   CI must be green before merge.
+    CI must be green before merge.
 
 ## Request a feature
 
