@@ -81,6 +81,7 @@ nav:
   - Welcome:
       - index.md
       - welcome/getting-started.md
+      - welcome/experiment-design-types.md
   - Developing:
       - development/getting-started-dev.md
       - Contributing:
