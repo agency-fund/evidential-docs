@@ -103,6 +103,7 @@ nav:
   - Integrating:
       - integration/overview.md
       - integration/integration.md
+      - integration/messaging-platforms.md
   - Analyzing:
       - analytics/data_analysis.md
       - analytics/data_storage.md
