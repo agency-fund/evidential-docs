@@ -13,7 +13,8 @@ Once your organisation is authorised, go to **[app.evidential.dev](https://app.e
 
 1. **Connect your data warehouse** – We currently support BigQuery, Redshift or Postgres. More connections may be coming.
 1. **Define experiment participants** – point us to the table or view that lists your participants with the relevant metrics.
-1. **Create an experiment** – name it, pick metrics & filters, choose randomisation unit and traffic split.
+1. **Create an experiment** – name it, pick metrics & filters, choose randomisation unit and traffic
+    split. See [Experiment Design Types](experiment-design-types.md) to decide which design fits.
 1. **Retrieve assignments** – download a CSV from the UI or call the `/v1/assignments` REST endpoint.
 1. **Analyse results** – use the built-in dashboard or query the experiment results endpoint
 

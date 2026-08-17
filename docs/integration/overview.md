@@ -7,6 +7,8 @@ We provide:
 - a friendly UI for you to design, validate, execute, and analyze experiments.
 - an [integration API](https://api.evidential.dev/docs) for your developers to integrate the treatments with your
     application.
+- built-in integrations with [messaging platforms](messaging-platforms.md), so treatments can be
+    delivered over your existing chat channels.
 
 ## Responsibility Diagram
 

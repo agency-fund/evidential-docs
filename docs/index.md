@@ -41,9 +41,11 @@ Evidential is built for nonprofits that are keen to test and learn. It is ideal 
 - Intuitive UI to create and monitor experiments
 - A single dashboard centralizing all your lessons learnt
 - Compatible with both your Data warehouse and Event engines
-- Multiple methods: frequentist A/B, Bayesian, Multi-armed & Contextual bandits
+- Multiple methods: frequentist A/B, Bayesian, Multi-armed & Contextual bandits — see
+    [Experiment Design Types](welcome/experiment-design-types.md)
 - Comprehensive API to manage experiments programmatically
-- *(Coming soon)* Integrations with the main messaging and survey platforms used by nonprofits
+- Integrations with the messaging platforms used by nonprofits, starting with
+    [Turn.io](integration/messaging-platforms.md) *(more coming soon)*
 
 ## What is it not?
 
