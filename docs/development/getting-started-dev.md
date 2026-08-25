@@ -6,6 +6,12 @@ The Evidential suite has a backend API server (FastAPI) and a frontend web-app (
 
     Note: See our [Reading List](reading-list.md) for links to documentation on our open-source tech stack.
 
+!!! tip "Contributing from outside the team?"
+
+    The clone commands below use the upstream repositories. If you're an external
+    contributor, [fork first](contributing-dev.md) and clone your fork instead — you
+    won't have push access to the upstream repos.
+
 ## Prerequisites
 
 1. Install [Task](https://taskfile.dev/).
