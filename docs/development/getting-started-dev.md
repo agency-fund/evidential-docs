@@ -117,11 +117,7 @@ Follow the steps below to get a local development environment running.
     networkingMode=mirrored
     ```
 
-    Restart WSL to apply the change, then reopen WSL when you're ready to continue:
-
-    ```shell
-    wsl --shutdown
-    ```
+    Restart WSL to apply the change, then reopen WSL when you're ready to continue
 
 1. Install the prerequisites:
 
