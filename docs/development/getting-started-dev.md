@@ -22,7 +22,11 @@ The Evidential suite has a backend API server (FastAPI) and a frontend web-app (
 
 1. Install [NodeJS](https://nodejs.org/en/download) version 22.
 
-## Backend
+## macOS and Linux Setup
+
+On Windows, start with [Windows Setup](#windows-setup), then follow these steps inside WSL.
+
+### Backend
 
 Follow the steps below to get a local development environment running.
 
@@ -69,7 +73,7 @@ Follow the steps below to get a local development environment running.
     uv run pre-commit install
     ```
 
-## Frontend
+### Frontend
 
 1. Check out the [https://github.com/agency-fund/evidential-fe](https://github.com/agency-fund/evidential-fe) repository:
 
@@ -87,5 +91,65 @@ Follow the steps below to get a local development environment running.
 1. Start the frontend server:
 
     ```shell
+    task start-airplane
+    ```
+
+## Windows Setup
+
+1. From Command Prompt, install WSL 2 and Debian:
+
+    ```shell
+    wsl --set-default-version 2
+    wsl --install -d Debian
+    ```
+
+1. From Command Prompt, enable mirrored networking mode so that servers running in WSL are reachable from Windows.
+    Open the WSL config file:
+
+    ```shell
+    notepad %USERPROFILE%\.wslconfig
+    ```
+
+    Add the following, then save and close the file:
+
+    ```ini
+    [wsl2]
+    networkingMode=mirrored
+    ```
+
+    Restart WSL to apply the change, then reopen WSL when you're ready to continue:
+
+    ```shell
+    wsl --shutdown
+    ```
+
+1. Install the prerequisites:
+
+    ```shell
+    curl -fsSL https://gist.githubusercontent.com/Snehaaa18/f17e639c90751c2acd4fbd93f04c1608/raw/e3a85bffc762c3f4b73edba91a3301e83e70c151/evid-setup.sh -o /tmp/evid-setup.sh
+    chmod +x /tmp/evid-setup.sh
+    /tmp/evid-setup.sh
+    ```
+
+1. Clone the repositories:
+
+    ```shell
+    mkdir -p ~/src
+    cd ~/src
+    git clone https://github.com/agency-fund/evidential-be.git
+    git clone https://github.com/agency-fund/evidential-fe.git
+    ```
+
+1. Run Evidential. Start the frontend server:
+
+    ```shell
+    cd ~/src/evidential-fe
+    task start-airplane
+    ```
+
+    Then, in a second shell, start the backend server:
+
+    ```shell
+    cd ~/src/evidential-be
     task start-airplane
     ```
