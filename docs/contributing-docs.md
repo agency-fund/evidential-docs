@@ -28,14 +28,14 @@ git checkout docs
 
 1. Install dependencies
 
-```
+```bash
 uv sync
 ```
 
 1. Install precommit hooks to this repo
 
-```
-   uv run pre-commit install
+```bash
+uv run prek install
 ```
 
 1. Preview locally
