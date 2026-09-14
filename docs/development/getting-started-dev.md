@@ -63,10 +63,10 @@ Follow the steps below to get a local development environment running.
 
 1. Visit the local interactive OpenAPI docs page: `http://localhost:8000/docs`
 
-1. Now set up the pre-commit hooks in your local git with:
+1. Set up the [prek](https://prek.j178.dev/) git hooks in your local checkout:
 
     ```shell
-    uv run pre-commit install
+    uv run prek install
     ```
 
 ## Frontend

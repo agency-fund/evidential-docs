@@ -42,7 +42,7 @@ cd evidential-be
 
 Follow [Getting Started](getting-started-dev.md) to install prerequisites, run the test
 suite, and start a local server. Don’t skip the last step there — installing the
-pre‑commit hooks (`uv run pre-commit install`) keeps formatting and lint issues from ever
+git hooks (`uv run prek install`) keeps formatting and lint issues from ever
 reaching your pull request.
 
 ## 3. Make your changes
@@ -62,15 +62,13 @@ any behavior you change. Commit with clear, descriptive messages.
 
 ```bash
 task test-airplane              # unit tests, no external services needed
-uv run pre-commit run --all-files
-uv run mypy src                 # type checking
+uv run prek run --all-files
 ```
 
 **Frontend (`evidential-fe`):**
 
 ```bash
-corepack pnpm run lint          # eslint
-npx tsc --noEmit                # type checking
+task lint
 ```
 
 GitHub Actions runs the same checks on every pull request, so running them locally first
