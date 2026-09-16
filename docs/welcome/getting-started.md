@@ -5,7 +5,7 @@
 
 ## Log in
 
-Once your organisation is authorised, go to **[app.evidential.dev](https://app.evidential.dev)** and sign in with **Google SSO**.
+Once your organisation is authorised, go to **[app.evidential.dev](https://app.evidential.dev)** and sign in with your organization's single sign-on provider.
 
 ## 5-minutes Setup
 
