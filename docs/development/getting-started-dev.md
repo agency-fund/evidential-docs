@@ -99,6 +99,12 @@ Follow the steps below to get a local development environment running.
     task start-airplane
     ```
 
+1. Now set up the [prek](https://prek.j178.dev/) git hooks in your local git with:
+
+    ```shell
+    prek install -f
+    ```
+
 ## Windows Setup
 
 1. From Command Prompt, install WSL 2:
