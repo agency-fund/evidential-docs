@@ -99,10 +99,10 @@ Follow the steps below to get a local development environment running.
     task start-airplane
     ```
 
-1. Now set up the [prek](https://prek.j178.dev/) git hooks in your local git with:
+1. Set up the [prek](https://prek.j178.dev/) git hooks in your local checkout:
 
     ```shell
-    prek install -f
+    prek install
     ```
 
 ## Windows Setup
