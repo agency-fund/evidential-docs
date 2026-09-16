@@ -13,8 +13,8 @@ theme:
       note: material/alert-circle
       annotation: material/help-circle
   font:
-    text: "Open Sans"
-    code: "Roboto Mono"
+    text: "Inter"
+    code: "JetBrains Mono"
   palette:
     - scheme: slate # Palette toggle for dark mode
       primary: custom
@@ -68,6 +68,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
 
 plugins:
+  - privacy
   - glightbox
   - search
   - blog:

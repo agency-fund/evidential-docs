@@ -22,5 +22,5 @@ familiarizing yourself with these technologies before developing or deploying Ev
         - [Dependency Injection](https://fastapi.tiangolo.com/tutorial/dependencies/)
 - Tooling:
     - [Task](https://taskfile.dev/)
-    - [pre-commit](https://pre-commit.com/)
+    - [prek](https://prek.j178.dev/)
     - [ruff](https://github.com/astral-sh/ruff)
