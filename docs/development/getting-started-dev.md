@@ -12,6 +12,11 @@ The Evidential suite has a backend API server (FastAPI) and a frontend web-app (
     contributor, [fork first](contributing-dev.md) and clone your fork instead — you
     won't have push access to the upstream repos.
 
+!!! tip "Setting up on Windows?"
+
+    Windows needs a few extra steps first. Start with [Windows Setup](#windows-setup) — it sets up WSL and installs
+    everything in Prerequisites for you — then continue with [Setup](#setup) inside WSL.
+
 ## Prerequisites
 
 1. Install [Task](https://taskfile.dev/).
@@ -20,9 +25,13 @@ The Evidential suite has a backend API server (FastAPI) and a frontend web-app (
 
 1. Install [Git LFS](https://git-lfs.com/).
 
-1. Install [NodeJS](https://nodejs.org/en/download) version 22.
+1. Install [NodeJS](https://nodejs.org/en/download) version 26.
 
-## Backend
+## Setup
+
+Run these steps on macOS, on Linux, or inside WSL on Windows.
+
+### Backend
 
 Follow the steps below to get a local development environment running.
 
@@ -69,7 +78,7 @@ Follow the steps below to get a local development environment running.
     uv run prek install
     ```
 
-## Frontend
+### Frontend
 
 1. Check out the [https://github.com/agency-fund/evidential-fe](https://github.com/agency-fund/evidential-fe) repository:
 
@@ -78,10 +87,10 @@ Follow the steps below to get a local development environment running.
     cd evidential-fe
     ```
 
-1. Switch to node version 22:
+1. Switch to node version 26:
 
     ```shell
-    nvm use 22
+    nvm use 26
     ```
 
 1. Start the frontend server:
@@ -89,3 +98,49 @@ Follow the steps below to get a local development environment running.
     ```shell
     task start-airplane
     ```
+
+1. Set up the [prek](https://prek.j178.dev/) git hooks in your local checkout:
+
+    ```shell
+    prek install
+    ```
+
+## Windows Setup
+
+1. From Command Prompt, install WSL 2:
+
+    ```shell
+    wsl --set-default-version 2
+    wsl --install -d ubuntu-24.04
+    ```
+
+1. From Command Prompt, configure WSL networking so that servers running in WSL are reachable from Windows.
+    Open the WSL config file:
+
+    ```shell
+    notepad %USERPROFILE%\.wslconfig
+    ```
+
+    Add the following, then save and close the file:
+
+    ```ini
+    [wsl2]
+    networkingMode=mirrored
+    dnsTunneling=true
+    firewall=true
+    autoProxy=true
+    ```
+
+    Restart WSL to apply the change, then reopen WSL when you're ready to continue.
+
+1. Install the prerequisites by running
+    [`tools/windows_setup.sh`](https://github.com/agency-fund/evidential-be/blob/main/tools/windows_setup.sh) from the
+    backend repo:
+
+    ```shell
+    curl -fsSL https://raw.githubusercontent.com/agency-fund/evidential-be/main/tools/windows_setup.sh -o /tmp/windows_setup.sh
+    chmod +x /tmp/windows_setup.sh
+    /tmp/windows_setup.sh
+    ```
+
+1. Go back to [Setup](#setup) and follow the remaining steps from inside WSL.
