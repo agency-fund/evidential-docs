@@ -12,6 +12,11 @@ The Evidential suite has a backend API server (FastAPI) and a frontend web-app (
     contributor, [fork first](contributing-dev.md) and clone your fork instead — you
     won't have push access to the upstream repos.
 
+!!! tip "Setting up on Windows?"
+
+    Windows needs a few extra steps first. Start with [Windows Setup](#windows-setup) — it sets up WSL and installs
+    everything in Prerequisites for you — then continue with [Setup](#setup) inside WSL.
+
 ## Prerequisites
 
 1. Install [Task](https://taskfile.dev/).
@@ -20,11 +25,11 @@ The Evidential suite has a backend API server (FastAPI) and a frontend web-app (
 
 1. Install [Git LFS](https://git-lfs.com/).
 
-1. Install [NodeJS](https://nodejs.org/en/download) version 22.
+1. Install [NodeJS](https://nodejs.org/en/download) version 26.
 
-## macOS and Linux Setup
+## Setup
 
-On Windows, start with [Windows Setup](#windows-setup), then follow these steps inside WSL.
+Run these steps on macOS, on Linux, or inside WSL on Windows.
 
 ### Backend
 
@@ -67,10 +72,10 @@ Follow the steps below to get a local development environment running.
 
 1. Visit the local interactive OpenAPI docs page: `http://localhost:8000/docs`
 
-1. Now set up the pre-commit hooks in your local git with:
+1. Now set up the [prek](https://prek.j178.dev/) git hooks in your local git with:
 
     ```shell
-    uv run pre-commit install
+    uv run prek install -f
     ```
 
 ### Frontend
@@ -82,10 +87,10 @@ Follow the steps below to get a local development environment running.
     cd evidential-fe
     ```
 
-1. Switch to node version 22:
+1. Switch to node version 26:
 
     ```shell
-    nvm use 22
+    nvm use 26
     ```
 
 1. Start the frontend server:
@@ -96,14 +101,14 @@ Follow the steps below to get a local development environment running.
 
 ## Windows Setup
 
-1. From Command Prompt, install WSL 2 and Debian:
+1. From Command Prompt, install WSL 2:
 
     ```shell
     wsl --set-default-version 2
-    wsl --install -d Debian
+    wsl --install -d ubuntu-24.04
     ```
 
-1. From Command Prompt, enable mirrored networking mode so that servers running in WSL are reachable from Windows.
+1. From Command Prompt, configure WSL networking so that servers running in WSL are reachable from Windows.
     Open the WSL config file:
 
     ```shell
@@ -115,37 +120,21 @@ Follow the steps below to get a local development environment running.
     ```ini
     [wsl2]
     networkingMode=mirrored
+    dnsTunneling=true
+    firewall=true
+    autoProxy=true
     ```
 
-    Restart WSL to apply the change, then reopen WSL when you're ready to continue
+    Restart WSL to apply the change, then reopen WSL when you're ready to continue.
 
-1. Install the prerequisites:
+1. Install the prerequisites by running
+    [`tools/windows_setup.sh`](https://github.com/agency-fund/evidential-be/blob/main/tools/windows_setup.sh) from the
+    backend repo:
 
     ```shell
-    curl -fsSL https://gist.githubusercontent.com/Snehaaa18/f17e639c90751c2acd4fbd93f04c1608/raw/e3a85bffc762c3f4b73edba91a3301e83e70c151/evid-setup.sh -o /tmp/evid-setup.sh
-    chmod +x /tmp/evid-setup.sh
-    /tmp/evid-setup.sh
+    curl -fsSL https://raw.githubusercontent.com/agency-fund/evidential-be/main/tools/windows_setup.sh -o /tmp/windows_setup.sh
+    chmod +x /tmp/windows_setup.sh
+    /tmp/windows_setup.sh
     ```
 
-1. Clone the repositories:
-
-    ```shell
-    mkdir -p ~/src
-    cd ~/src
-    git clone https://github.com/agency-fund/evidential-be.git
-    git clone https://github.com/agency-fund/evidential-fe.git
-    ```
-
-1. Run Evidential. Start the frontend server:
-
-    ```shell
-    cd ~/src/evidential-fe
-    task start-airplane
-    ```
-
-    Then, in a second shell, start the backend server:
-
-    ```shell
-    cd ~/src/evidential-be
-    task start-airplane
-    ```
+1. Go back to [Setup](#setup) and follow the remaining steps from inside WSL.
