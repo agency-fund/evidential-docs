@@ -49,7 +49,7 @@ Follow the steps below to get a local development environment running.
 1. Set up the [prek](https://prek.j178.dev/) git hooks in your local checkout:
 
     ```shell
-    uv run prek install
+    prek install
     ```
 
 1. Install dependencies (Atlas, uv, Python dependencies) by running:
@@ -91,7 +91,7 @@ Follow the steps below to get a local development environment running.
     cd evidential-fe
     ```
 
-1. Switch to node version 26:
+1. If you installed Node.js with nvm (the Windows setup script does), switch to version 26:
 
     ```shell
     nvm use 26
