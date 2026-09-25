@@ -109,6 +109,12 @@ Follow the steps below to get a local development environment running.
     prek install
     ```
 
+1. Set up the [prek](https://prek.j178.dev/) git hooks in your local checkout:
+
+    ```shell
+    prek install
+    ```
+
 1. Start the frontend server:
 
     ```shell
