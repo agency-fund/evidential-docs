@@ -27,7 +27,7 @@ The Evidential suite has a backend API server (FastAPI) and a frontend web-app (
 
 1. Install [NodeJS](https://nodejs.org/en/download) version 26.
 
-1. Install [pnpm](https://pnpm.io/installation).
+1. Install [pnpm](https://pnpm.io/installation). pnpm will select the Node.js version required by the frontend.
 
 1. Install [prek](https://prek.j178.dev/installation/).
 
@@ -39,7 +39,7 @@ Run these steps on macOS, on Linux, or inside WSL on Windows.
 
 Follow the steps below to get a local development environment running.
 
-1. Check out the [https://github.com/agency-fund/evidential-be](https://github.com/agency-fund/evidential-be) repository:
+1. Clone the [https://github.com/agency-fund/evidential-be](https://github.com/agency-fund/evidential-be) repository:
 
     ```shell
     gh repo clone agency-fund/evidential-be
@@ -97,11 +97,9 @@ Follow the steps below to get a local development environment running.
     nvm use 26
     ```
 
-1. Install dependencies:
+1. Clone the [https://github.com/agency-fund/evidential-fe](https://github.com/agency-fund/evidential-fe) repository:
 
-    ```shell
-    pnpm i
-    ```
+  
 
 1. Set up the [prek](https://prek.j178.dev/) git hooks in your local checkout:
 
@@ -109,10 +107,10 @@ Follow the steps below to get a local development environment running.
     prek install
     ```
 
-1. Set up the [prek](https://prek.j178.dev/) git hooks in your local checkout:
+1. Confirm that pnpm selects and runs the required Node.js version:
 
     ```shell
-    prek install
+    pnpm exec node --version
     ```
 
 1. Start the frontend server:
