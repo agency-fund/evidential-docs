@@ -3,10 +3,6 @@
 This is a collection of random tips about testing. Most of the test configurations you will use are already defined
 in the [Taskfile](https://github.com/agency-fund/evidential-be/blob/main/Taskfile.yml).
 
-!!! warning
-
-    If you find yourself doing any testing that doesn't have `task` entry for it already, let's talk!
-
 ## Unit Tests<a name="unit-tests"></a>
 
 Run unit tests with:
@@ -15,17 +11,12 @@ Run unit tests with:
 task test
 ```
 
-We run unittests with [pytest](https://docs.pytest.org/en/stable/).
+We run unittests with [pytest](https://docs.pytest.org/en/stable/). Run `task --summary test` to see examples of how to run subsets of tests.
 
-The `task test` helper automatically creates a local Postgres instance for testing and creates a
-testing data warehouse from the file
-[testing_dwh.csv.zst](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/testdata/testing_dwh.csv.zst).
-It creates the "dwh" database, and loads the file's data into a table also named "dwh".
-[xngin.testing.settings.json](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/testdata/xngin.testing.settings.json)
-contains an example of a datasource created in Evidential with a typical participant type
-configuration backed by the table above.
+The `task test` helper automatically creates a local Postgres instance for testing and creates
+testing data warehouses named "dwh" and "wide".
 
-[Various tests](https://github.com/agency-fund/evidential-be/blob/main/.github/workflows/test.yaml) are also run as part of our GitHub action test workflow.
+[Various tests](https://github.com/agency-fund/evidential-be/blob/main/.github/workflows/test.yaml) are also run as part of our GitHub Action test workflow.
 
 [conftest.py](https://github.com/agency-fund/evidential-be/blob/main/src/xngin/apiserver/conftest.py) defines fixtures used by many of the tests.
 
