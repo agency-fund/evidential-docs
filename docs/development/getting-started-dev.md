@@ -27,6 +27,10 @@ The Evidential suite has a backend API server (FastAPI) and a frontend web-app (
 
 1. Install [NodeJS](https://nodejs.org/en/download) version 26.
 
+1. Install [pnpm](https://pnpm.io/installation).
+
+1. Install [prek](https://prek.j178.dev/installation/).
+
 ## Setup
 
 Run these steps on macOS, on Linux, or inside WSL on Windows.
