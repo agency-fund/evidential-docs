@@ -31,6 +31,23 @@ is encrypted with a unique key, and that key is encrypted by the cloud provider.
 
 In both of these scenarios, customer data is always encrypted at rest.
 
+## Session Token Encryption
+
+The API server also uses a `TokenCryptor` to authenticate and encrypt opaque session tokens sent to the client. These
+tokens contain serialized session identity data and can only be decoded by a server with the matching keyset. This is
+separate from the secrets backends above: token encryption uses a NaCl keyset and is configured with
+`XNGIN_SESSION_TOKEN_KEYSET`.
+
+Generate a keyset for a deployment with:
+
+```shell
+uv run xngin-cli create-nacl-keyset
+```
+
+Set the command's base64 output as `XNGIN_SESSION_TOKEN_KEYSET`. Keep the same keyset configured across server
+restarts so existing sessions remain valid. If the keyset is lost or changed, previously issued session tokens can no
+longer be decrypted and users will need to sign in again.
+
 ## Configuration<a name="configuration"></a>
 
 ### Selecting an Encryption Provider<a name="selecting-an-encryption-provider"></a>
