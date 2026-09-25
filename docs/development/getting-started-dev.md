@@ -42,6 +42,12 @@ Follow the steps below to get a local development environment running.
     cd evidential-be
     ```
 
+1. Set up the [prek](https://prek.j178.dev/) git hooks in your local checkout:
+
+    ```shell
+    uv run prek install
+    ```
+
 1. Install dependencies (Atlas, uv, Python dependencies) by running:
 
     ```shell
@@ -72,12 +78,6 @@ Follow the steps below to get a local development environment running.
 
 1. Visit the local interactive OpenAPI docs page: `http://localhost:8000/docs`
 
-1. Set up the [prek](https://prek.j178.dev/) git hooks in your local checkout:
-
-    ```shell
-    uv run prek install
-    ```
-
 ### Frontend
 
 1. Check out the [https://github.com/agency-fund/evidential-fe](https://github.com/agency-fund/evidential-fe) repository:
@@ -91,6 +91,18 @@ Follow the steps below to get a local development environment running.
 
     ```shell
     nvm use 26
+    ```
+
+1. Install dependencies:
+
+    ```shell
+    pnpm i
+    ```
+
+1. Set up the [prek](https://prek.j178.dev/) git hooks in your local checkout:
+
+    ```shell
+    prek install
     ```
 
 1. Start the frontend server:
