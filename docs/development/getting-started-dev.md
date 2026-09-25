@@ -20,13 +20,13 @@ The Evidential suite has a backend API server (FastAPI) and a frontend web-app (
 
 1. Install [Git LFS](https://git-lfs.com/).
 
-1. Install [NodeJS](https://nodejs.org/en/download) version 22.
+1. Install [pnpm](https://pnpm.io/installation). pnpm will select the Node.js version required by the frontend.
 
 ## Backend
 
 Follow the steps below to get a local development environment running.
 
-1. Check out the [https://github.com/agency-fund/evidential-be](https://github.com/agency-fund/evidential-be) repository:
+1. Clone the [https://github.com/agency-fund/evidential-be](https://github.com/agency-fund/evidential-be) repository:
 
     ```shell
     gh repo clone agency-fund/evidential-be
@@ -71,17 +71,17 @@ Follow the steps below to get a local development environment running.
 
 ## Frontend
 
-1. Check out the [https://github.com/agency-fund/evidential-fe](https://github.com/agency-fund/evidential-fe) repository:
+1. Clone the [https://github.com/agency-fund/evidential-fe](https://github.com/agency-fund/evidential-fe) repository:
 
     ```shell
     gh repo clone agency-fund/evidential-fe
     cd evidential-fe
     ```
 
-1. Switch to node version 22:
+1. Confirm that pnpm selects and runs the required Node.js version:
 
     ```shell
-    nvm use 22
+    pnpm exec node --version
     ```
 
 1. Start the frontend server:
