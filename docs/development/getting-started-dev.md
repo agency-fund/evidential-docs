@@ -84,7 +84,7 @@ Follow the steps below to get a local development environment running.
 
 ### Frontend
 
-1. Check out the [https://github.com/agency-fund/evidential-fe](https://github.com/agency-fund/evidential-fe) repository:
+1. Clone the [https://github.com/agency-fund/evidential-fe](https://github.com/agency-fund/evidential-fe) repository:
 
     ```shell
     gh repo clone agency-fund/evidential-fe
@@ -96,10 +96,6 @@ Follow the steps below to get a local development environment running.
     ```shell
     nvm use 26
     ```
-
-1. Clone the [https://github.com/agency-fund/evidential-fe](https://github.com/agency-fund/evidential-fe) repository:
-
-  
 
 1. Set up the [prek](https://prek.j178.dev/) git hooks in your local checkout:
 
