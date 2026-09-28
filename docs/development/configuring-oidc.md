@@ -13,8 +13,12 @@ an encrypted session token to the SPA, which it uses as a bearer token when invo
 
 The SPA acquires the OIDC parameters by requesting configuration data from `/v1/a/oidc/config`.
 
-Evidential requires users to be invited before they can log in. Users can be invited via Organization Settings page in
-the web UI, or via the command line (run `xngin-cli add-user --help` for details). On first login, the user is bound to
+Evidential requires users to be invited before they can log in, with one exception: when the database contains no users,
+the first user to sign in through the configured identity provider is created automatically with administrator privileges.
+During initial setup, sign in with the account you intend to use as the first administrator.
+
+Invite additional users via the Organization Settings page in the web UI, or via the command line (run
+`xngin-cli add-user --help` for details). On first login, the user is bound to
 the identity provider's issuer and subject identifier, and only that identity provider can sign them in afterwards.
 
 Session tokens are bound to the configured issuer and client ID. Changing `XNGIN_OIDC_ISSUER` or
