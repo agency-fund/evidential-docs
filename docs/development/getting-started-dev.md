@@ -25,8 +25,6 @@ The Evidential suite has a backend API server (FastAPI) and a frontend web-app (
 
 1. Install [Git LFS](https://git-lfs.com/).
 
-1. Install [NodeJS](https://nodejs.org/en/download) version 26.
-
 1. Install [pnpm](https://pnpm.io/installation). pnpm will select the Node.js version required by the frontend.
 
 1. Install [prek](https://prek.j178.dev/installation/).
@@ -89,12 +87,6 @@ Follow the steps below to get a local development environment running.
     ```shell
     gh repo clone agency-fund/evidential-fe
     cd evidential-fe
-    ```
-
-1. Switch to node version 26:
-
-    ```shell
-    nvm use 26
     ```
 
 1. Set up the [prek](https://prek.j178.dev/) git hooks in your local checkout:
