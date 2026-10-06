@@ -29,7 +29,7 @@ Session tokens are bound to the configured issuer and client ID. Changing `XNGIN
 Evidential is compatible with most OIDC identity providers that support authorization code flow with PKCE and RS256 keys.
 We require that the `email_verified` claim to be present and true, in either the ID token or in the userinfo response.
 
-This has been tested with Google, Okta, Authentik, and Keycloak.
+This has been tested with Google, Okta, Authentik, Keycloak, and Rauthy.
 
 ## Backend environment variables
 
@@ -129,6 +129,20 @@ Okta is supported.
 - `XNGIN_OIDC_ISSUER`: The issuer URL will depend on whether you are using the org authorization server or a
     custom authorization server: `https://{yourOktaDomain}` for the org authorization server, or
     `https://{yourOktaDomain}/oauth2/{authorizationServerId}` for a custom authorization server such as `default`.
+- `XNGIN_OIDC_CLIENT_ID`: The client ID.
+- `XNGIN_OIDC_CLIENT_SECRET`: do not set.
+
+### Rauthy
+
+Rauthy is supported.
+
+Rauthy signs tokens with EdDSA by default, so set the client's ID token algorithm to RS256. Rauthy's
+[documentation](https://sebadob.github.io/rauthy/intro.html) describes how to configure clients.
+
+#### Environment Variables
+
+- `XNGIN_OIDC_ISSUER`: The issuer URL is the Rauthy URL followed by `/auth/v1/`, e.g. `https://rauthy/auth/v1/`.
+    Keep the trailing slash.
 - `XNGIN_OIDC_CLIENT_ID`: The client ID.
 - `XNGIN_OIDC_CLIENT_SECRET`: do not set.
 
