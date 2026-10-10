@@ -11,7 +11,8 @@ Use synthetic data only: the linked tabs must be publicly accessible.
     Six metrics have sample observations; `onboarded_within_1_week` starts blank for live entry.
 1. Set sharing to **Anyone with the link → Viewer** and allow downloads. Public access must be allowed by your Workspace.
     Copy the raw tab's URL including `gid`; without it, Evidential uses the first tab.
-1. In Evidential, add a **Google Sheets (demo)** datasource with the **Raw tab URL** and select `linked_sheet`.
+1. In Evidential, add a **Google Sheets (demo)** datasource with the **Raw tab URL**. The table picker shows
+    the spreadsheet/tab name supplied by Google.
     Use `participant_id` as the ID and choose a primary metric and optional secondary metrics.
     Leave **Cluster key** empty for individual assignment. To balance regions across arms, add `region` to **Strata**;
     using it as the cluster key instead assigns whole regions together (four clusters in the example).
@@ -27,7 +28,8 @@ The raw tab remains the source for setup, power analysis, enrollment, and CSV ex
     Keep the raw tab. Disable **Convert text to numbers, dates, and formulas** to preserve IDs, including leading zeroes.
     See [Google's CSV import instructions](https://support.google.com/docs/answer/40608?hl=en).
 1. Copy the new tab's URL including `gid`. On the experiment page, click **Connect Experiment tab**, paste it into
-    **Experiment tab URL (outcomes)**, and save. The dialog shows the raw-tab URL read-only.
+    **Experiment tab URL (outcomes)**, and click **Save experiment tab**. The experiment name is shown as text;
+    the raw datasource URL is locked and greyed out.
 
 Each experiment has its own outcomes connection. Connecting or reconnecting it leaves the datasource and other
 experiments unchanged. Refresh and live polling stay disabled until connected.
@@ -93,3 +95,4 @@ Each analysis reads a fresh, temporary in-memory snapshot through the warehouse 
 The experiment config exposes `google_sheets_experiment_url`, updated through the experiment PATCH endpoint.
 Omitting the field preserves the connection; explicit `null` disconnects it.
 Analysis requires a connection, and scheduled snapshots skip unconnected Sheets experiments.
+Table inspection returns Google's source name as `display_name`; `linked_sheet` remains the internal table ID.
