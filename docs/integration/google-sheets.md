@@ -39,6 +39,8 @@ Assignment exports continue to use raw-tab values, not later outcome edits.
 
 Edit the selected metric cells in the **Experiment** tab, then click **Refresh** to save and display an analysis snapshot.
 The arm comparison and time-series chart update, with exact timestamps and history preserved after reloading.
+The difference plot includes the displayed confidence-interval limits in its axis range.
+Missing intervals in earlier snapshots do not restrict that range.
 
 **Start live demo** refreshes about every 10 seconds for up to 15 minutes. Polling stops when the page closes,
 on an error, on reconnection, or when you click **Stop live demo**. Google may briefly cache CSV exports.
@@ -96,3 +98,4 @@ The experiment config exposes `google_sheets_experiment_url`, updated through th
 Omitting the field preserves the connection; explicit `null` disconnects it.
 Analysis requires a connection, and scheduled snapshots skip unconnected Sheets experiments.
 Table inspection returns Google's source name as `display_name`; `linked_sheet` remains the internal table ID.
+While that name loads, the UI shows a loading label rather than the internal ID.
