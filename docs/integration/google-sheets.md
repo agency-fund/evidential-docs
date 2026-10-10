@@ -64,6 +64,9 @@ The filled example values are synthetic, not measurements of a real intervention
 During setup, the selected column's mean and spread supply baseline statistics for sample-size planning.
 **Minimum Effect** defaults to 10%, the relative change to detect. During analysis, the baseline arm is the control group.
 
+Clustered confidence intervals reflect variation between clusters. Equal cluster means can produce a zero-width
+mean interval even when individual values vary.
+
 ### Start with blank outcomes
 
 Keep participant IDs and metric headers populated, with outcome cells empty. Select a metric, click **Estimate Sample Size**,
