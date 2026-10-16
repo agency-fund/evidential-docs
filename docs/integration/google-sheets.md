@@ -24,7 +24,8 @@ The datasource tab remains the source for setup, enrollment, and assignment expo
    The export includes participant IDs, selected experiment fields, and `evidential_<experiment_id>_arm`.
 1. Import the CSV with **File → Import → Upload → Insert new sheet(s)**. Keep the source tab unchanged.
    Disable **Convert text to numbers, dates, and formulas** to preserve IDs, including leading zeroes.
-1. Enter the outcomes tab's URL, including `gid`, in the experiment's Google Sheets connection settings.
+1. Click **Connect sheet** on the experiment card, or open its Google Sheets connection settings.
+   Enter the outcomes tab's URL, including `gid`.
 
 Each experiment owns its outcomes connection. Changing it does not repoint the datasource or other experiments.
 Assignments remain authoritative in Evidential; editing arm labels in the spreadsheet does not reassign participants.
@@ -49,4 +50,4 @@ are skipped by scheduled snapshots.
 Access requires a privileged user session; datasource API keys are not supported.
 
 Table inspection exposes Google's source name as `display_name`; `linked_sheet` remains an internal identifier.
-The UI shows a loading state while the source name is being retrieved.
+The table picker shows a spinner while retrieving the source name.
