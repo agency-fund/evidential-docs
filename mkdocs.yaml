@@ -104,6 +104,7 @@ nav:
   - Integrating:
       - integration/overview.md
       - integration/integration.md
+      - integration/google-sheets.md
   - Analyzing:
       - analytics/data_analysis.md
       - analytics/data_storage.md
