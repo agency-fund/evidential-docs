@@ -13,10 +13,15 @@ Google Sheets is available only to privileged users.
 1. Share the spreadsheet as **Anyone with the link → Viewer** and allow downloads. Your Workspace must permit public access.
     Do not use this connector for confidential or personal data: access restrictions in Evidential do not make the Google export private.
 1. Copy the source tab's URL, including `gid`, and add a **Google Sheets** datasource in Evidential.
-    Without `gid`, the first tab is used. The table picker displays the source name supplied by Google.
+    Without `gid`, the first tab is used. Evidential captures Google's source name once when connecting
+    and saves it as the datasource's table name.
 1. Create a preassigned A/B experiment. Select the participant ID column and primary and optional secondary metrics.
 
 The datasource tab remains the source for setup, enrollment, and assignment exports.
+
+The table picker and experiment details use this saved name. Renaming the spreadsheet or tab, or editing
+the datasource URL, does not change the saved name or existing experiment table references. The URL and
+`gid` still determine which tab is read; the saved table name does not select the Google tab.
 
 ## Connect experiment outcomes
 
@@ -40,6 +45,7 @@ Google may briefly cache exports. Reconnect the URL if a tab is replaced or dele
 - Row 1 must have unique headers starting with a letter or underscore, using only letters, numbers, and underscores.
 - Use plain numeric outcome cells without currency symbols or thousands separators. `TRUE` and `FALSE` are booleans.
     Blank cells represent missing outcomes; zero and `FALSE` are observed outcomes.
+- The Google-provided source name must fit Evidential's 100-character table-name limit when connecting.
 - Capacity limits are 5,000 data rows, 100 columns including assignment columns, and an 8 MB CSV export.
 
 ## API notes
@@ -49,5 +55,5 @@ the connection; explicit `null` disconnects it. Analysis requires a connection, 
 are skipped by scheduled snapshots.
 Access requires a privileged user session; datasource API keys are not supported.
 
-Table inspection exposes Google's source name as `display_name`; `linked_sheet` remains an internal identifier.
-The table picker shows a spinner while retrieving the source name.
+The datasource table list, table inspection, and experiment `design_spec.table_name` use the name saved
+at connection. Outcomes use the experiment's own URL while retaining its saved datasource table name.
