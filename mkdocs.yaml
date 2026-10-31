@@ -78,6 +78,7 @@ plugins:
       redirect_maps:
         "welcome/index.md": "index.md"
         "development/enabling-oidc.md": "development/configuring-oidc.md"
+        "development/task-queues.md": "development/workers.md"
 
 nav:
   - Welcome:
@@ -98,7 +99,7 @@ nav:
           - development/migration.md
       - Explainers:
           - development/secrets.md
-          - development/task-queues.md
+          - development/workers.md
           - development/reading-list.md
           - development/faq.md
   - Integrating:

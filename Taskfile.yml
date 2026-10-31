@@ -1,0 +1,7 @@
+version: '3'
+
+tasks:
+  start:
+    desc: "Serves the docs locally at http://localhost:8071, rebuilding on changes."
+    interactive: true
+    cmd: uv run mkdocs serve --dev-addr localhost:8071

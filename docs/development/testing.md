@@ -54,7 +54,7 @@ Method 2: Trigger via GitHub UI
 
 ## Showing additional test output<a name="showing-additional-test-output"></a>
 
-`pytest -rA` to print out _all_ stdout from your tests; `-rx` for just those failing. (See
+`task test -- -rA` to print out _all_ stdout from your tests; `-rx` for just those failing. (See
 [docs](https://docs.pytest.org/en/latest/how-to/output.html#producing-a-detailed-summary-report) for more info.)
 
 ## Loading the testing DWH with a different schema?<a name="loading-the-testing-dwh-with-a-different-schema"></a>

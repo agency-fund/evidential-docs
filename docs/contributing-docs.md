@@ -14,36 +14,37 @@ We use [MkDocs](https://www.mkdocs.org/getting-started/) to build our project do
 [Material](https://squidfunk.github.io/mkdocs-material/reference/) theme and [custom
 overrides](https://squidfunk.github.io/mkdocs-material/customization/#extending-the-theme).
 
-## Local setup
+## Getting Started
 
 1. Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
-1. Clone and switch to source branch
+1. Install [Taskfile](https://taskfile.dev/docs/installation)
 
-```bash
-git clone git@github.com:agency-fund/evidential-docs.git
-cd evidential-docs
-git checkout docs
-```
+1. Clone and switch to source branch:
 
-1. Install dependencies
+    ```bash
+    git clone git@github.com:agency-fund/evidential-docs.git
+    cd evidential-docs
+    git checkout docs
+    ```
 
-```bash
-uv sync
-```
+1. Install dependencies:
 
-1. Install precommit hooks to this repo
+    ```bash
+    uv sync
+    ```
 
-```bash
-uv run prek install
-```
+1. Install precommit hooks to this repo:
 
-1. Preview locally
+    ```bash
+    uv run prek install
+    ```
 
-```bash
-uv run mkdocs serve
-# Default served at http://127.0.0.1:8000; use -a host:port to customize
-```
+1. Preview locally by starting a local server at [http://localhost:8071](http://localhost:8071):
+
+    ```bash
+    task start
+    ```
 
 ## Routine content update & deploy
 

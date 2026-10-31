@@ -23,4 +23,4 @@ The fix will depend on your operating system.
 
 ### OSX<a name="osx"></a>
 
-Run `brew install postgresql@17`.
+Run `brew install postgresql@18`.
