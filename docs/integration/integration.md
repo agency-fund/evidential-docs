@@ -54,9 +54,9 @@ sequenceDiagram
     legitimate.
 
 1. Configuring an API Key (per Datasource; visit its details page) is required to make requests to
-    Evidential's backend to fetch experiment and assignment information. All API requests should have
-    the custom headers `Datasource-ID:` and the generated `X-API-Key:` attached. These IDs are
-    available via copy-to-clipboard buttons in the UI.
+    Evidential's backend to fetch experiment and assignment information. All API requests need the
+    generated `X-API-Key:` header. Listing a datasource's experiments also needs the `Datasource-ID:`
+    header. Both values are available via copy-to-clipboard buttons in the UI.
 
 1. When a user commits an experiment, the client is notified via the configured webhook. For debugging purposes,
     the history of `experiment.created` webhooks is available in the Evidential UI.
@@ -77,8 +77,9 @@ sequenceDiagram
 1. [Experiment metadata] It is recommended that the client system fetch the newly committed
     experiment's information to facilitate execution on the client's side. It is expected that at a
     minimum, the experiment's start and end date could be used to signal when to enable the
-    experiment and later shut it off. Furthermore, for an Online experiment, filters used to target
-    eligible participants could be used to determine for whom to issue an assignment request.
+    experiment and later shut it off. For an Online experiment with filters, send the participant's
+    properties to the `assign_with_filters` endpoint so Evidential can check eligibility. See
+    [how filters work](../welcome/experiment-design-types.md#how-filters-work-preassigned-vs-online).
 
 1. [Bulk assignment lookup] In addition to CSV exports from the UI, one can also export *all*
     assignments made so far via API as CSV or JSON. This allows a client's backend to know which
@@ -104,6 +105,11 @@ sequenceDiagram
         traffic to route into the experiment, and then make the Evidential request for each (vs e.g.
         routing 100% of your users into an Evidential experiment in which 90% are in a Control arm and
         10% in Treatment).
+
+- For *Multi-Armed Bandit* and *Contextual Multi-Armed Bandit* experiments, report each
+    participant's result to the `outcome` endpoint. *Contextual* bandits assign through the
+    `assign_cmab` endpoint, which takes the participant's context values. *DWH-connected* bandits
+    read results from your data warehouse and reject outcome reports.
 
 ## Additional developer notes
 
